@@ -4,8 +4,6 @@ const router = require('./routes/routes');
 
 const PORT = process.env.PORT || 3000;
 
-
-
 app.set("view engine", 'ejs');
 //allow app to make use of routes, the router is exported from the routes file
 app.use('/', router);

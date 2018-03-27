@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 html{
     height: 100%;
 }
 
 body{
-    background: url("https://source.unsplash.com/VfIYjO8P_24/1600x900");
+    background: url("https://source.unsplash.com/DUpCzTQbcr0/1600x900");
     background-position: center;
     background-size: cover;
 
@@ -13,27 +14,36 @@ body{
 
 .container{
     padding: 100px 0;
-    text-align: center;
-    color: midnightblue;
+    text-align: -webkit-center;
+    color: chocolate;
 }
 
 h1 {
     font-family: 'Abril Fatface', cursive;
     font-weight: 400;
-    font-size: 10em;
+    font-size: 9em;
     position: relative;
 }
 
 h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    font-size: 1.6em;
 }
 
 h3{
     font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: 1.5em;
+}
+
+p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 1.0em;
+    position: relative;
+    line-height: 10px;
 }
 
 
