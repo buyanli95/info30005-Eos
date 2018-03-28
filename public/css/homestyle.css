@@ -9,10 +9,12 @@ html{
 
 body{
     background: url("https://source.unsplash.com/1RqXSxGfb0M/1920x1080");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
 }
 
 .container{
@@ -40,9 +42,7 @@ h1 {
     font-weight: 900;
     font-size: 9em;
     position: relative;
-    /*background: url("https://source.unsplash.com/u6uvXb7ALrM/1920x1080") no-repeat left top;*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
+
 }
 
 h2 {
