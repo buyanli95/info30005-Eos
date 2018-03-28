@@ -3,39 +3,62 @@
 
 html{
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body{
-    background: url("https://source.unsplash.com/DUpCzTQbcr0/1600x900");
+    background: url("https://source.unsplash.com/1RqXSxGfb0M/1920x1080");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 .container{
     padding: 100px 0;
     text-align: -webkit-center;
-    color: chocolate;
+    color: coral;
+
+
+}
+
+.teamname{
+    position: relative;
+    top: -120px;
+
+}
+
+.teammember{
+    position: relative;
+    top: -120px;
+    color: bisque;
 }
 
 h1 {
     font-family: 'Abril Fatface', cursive;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 9em;
     position: relative;
+    /*background: url("https://source.unsplash.com/u6uvXb7ALrM/1920x1080") no-repeat left top;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
 }
 
 h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size: 1.6em;
+    font-size: 1.5em;
+
 }
 
 h3{
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 1.5em;
+    letter-spacing: 10px;
+    color: bisque;
 }
 
 p{
@@ -45,6 +68,3 @@ p{
     position: relative;
     line-height: 10px;
 }
-
-
-
