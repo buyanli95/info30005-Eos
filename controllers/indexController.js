@@ -1,4 +1,4 @@
-timeCounter = require('../public/js/timeCounter')
+// timeCounter = require('../public/js/timeCounter')
 
 module.exports.homePage = function (req, res) {
     //Coming soon page

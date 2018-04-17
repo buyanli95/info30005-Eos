@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>header</title>
+    <script type="text/javascript" src="/js/login.js"></script>
     <link rel="stylesheet" href="/css/header_login.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -15,13 +16,16 @@
     </div>
     <div class="login-grid">
         <div class="login">
+            <form method="post" action="/js/login.js">
             <!--login form-->
             <label for="login_email"></label>
-            <input type="text" placeholder="Email Address" name="login_email" required>
+            <input type="text" placeholder="Email Address" id="login_email" required>
             <label for="login_password"></label>
-            <input type="text" placeholder="Password" name="login_password" required>
-            <button type="submit"><gaegu>Login</gaegu></button>
+            <input type="text" placeholder="Password" id="login_password" required>
+            <input type="button" id="btn_login" value="login" onclick="login();"/>
+            <!--<button type="submit" onclick="login();"><gaegu>Login</gaegu></button>-->
             <a class="link-forgot-password" href="/forgot_pw">Forget Password?</a>
+            </form>
         </div>
     </div>
 </div>
