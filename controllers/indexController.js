@@ -1,6 +1,7 @@
 timeCounter = require('../public/js/timeCounter')
 
 module.exports.homePage = function (req, res) {
-    //res.send('this is the home page!');
-    res.render('home_template');
+    //Coming soon page
+    //res.render('home_template');
+    res.render('eos_home');
 };

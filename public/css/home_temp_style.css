@@ -15,14 +15,12 @@ body{
     background-repeat: no-repeat;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
+    color: cornflowerblue;
 }
 
 .container{
     padding: 100px 0;
     text-align: -webkit-center;
-    color: coral;
-
-
 }
 
 .teamname{
@@ -42,6 +40,7 @@ h1 {
     font-weight: 900;
     font-size: 9em;
     position: relative;
+    color: #DD9645;
 
 }
 
@@ -49,7 +48,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 1.5em;
-
+    color: #DD9645;
 }
 
 h3{
