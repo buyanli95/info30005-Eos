@@ -1,10 +1,56 @@
+<!--Home page for participant, after login-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/participant_home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Login successful! Welcome to EOS!</h1>
+    <!--topbar-->
+    <div class="topbar">
+        <!--logo-->
+        <div class="logo">
+            <a href="/eos_participant_home">
+                <img src="/image/eos_logo.png" alt="Logo is missing">
+            </a>
+        </div>
+        <!--search-->
+        <div class="search">
+            <!--<input type="text" id="search_bar" placeholder="Interests">-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+       <!--home-->
+        <div class="buttons-coll">
+            <button onclick="{location.href='/eos_participant_home'}" class="custom-btn btn-home" ><span>Home</span></button>
+        </div>
+        <!--profile-->
+        <div class="profile">
+            <a href="/eos_participant_profile">
+                <img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">
+            </a>
+        </div>
+        <!--notification-->
+        <div class="notif">
+            <img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">
+        </div>
+        <!--logout-->
+        <div class="buttons-coll">
+            <button onclick="{location.href='/'}" class="custom-btn btn-logout" ><span>Logout</span></button>
+        </div>
+    </div>
+
+    <!--body part-->
+    <div class="p_posts">
+        <div class="filters"></div>
+        <div class="post_board"></div>
+            <div class="postbox">box1</div>
+            <div class="postbox">box2</div>
+            <div class="postbox">...</div>
+    </div>
 </body>
 </html>

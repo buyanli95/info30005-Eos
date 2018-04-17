@@ -1,3 +1,4 @@
+<!--Before login, the body part of the welcome page(very first interface)-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+    <!--inherit the header(logo, login)-->
     <%- include("./header_login.ejs") %>
     <div class="body">
         <div class="slogan-grid">
@@ -17,18 +19,14 @@
             <p>Not about jobs</p>
             <p>Looking for opportunities</p>
             <p>Know more about your future career</p><br>
-            <button type="button" class="btn btn-success btn-circle btn-xl" onclick="{location.href='/participant_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Participant</button>
-
-            <!--<button type="button" class="btn btn-outline-success">Success</button>-->
+            <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='/participant_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Participant</button>
         </div>
+
         <div class="button2">
-            <!--<button type="button" class="btn btn-light btn-lg" name="providers">Providers</button>-->
             <p>Providing ideas and opportunities</p>
             <p>....</p>
             <p>....</p><br>
-            <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='/provider_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Provider</button>
-
-            <!--<button type="button" class="btn btn-outline-success">Success</button>-->
+            <button type="button" class="btn btn-success btn-circle btn-xl" onclick="{location.href='/provider_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Provider</button>
         </div>
 
     </div>
