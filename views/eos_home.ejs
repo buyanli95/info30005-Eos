@@ -7,23 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <div class="page">
-        <div class="header">EOS</div>
-        <div class="login-grid">
-            <div class="login">
-            <!--login form-->
-            <label for="login_email"></label>
-            <input type="text" placeholder="Email Address" name="login_email" required>
-            <label for="login_password"></label>
-            <input type="text" placeholder="Password" name="login_password" required>
-            <button type="submit"><gaegu>Login</gaegu></button>
-                <a class="link-forgot-password" href="/forgot_pw">Forget Password?</a>
-            </div>
+    <%- include("./header_login.ejs") %>
+    <div class="body">
+        <div class="slogan-grid">
+            <div class="slogan">Not about Jobs: Find out what you loves most!</div>
         </div>
-
-        <!--<div class="slogan-grid">-->
-            <!--<div class="slogan">Not about Jobs: Find out what you loves most!</div>-->
-        <!--</div>-->
 
         <div class="button1">
             <p>Not about jobs</p>

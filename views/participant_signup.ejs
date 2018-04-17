@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Eos-Sign Up</title>
+    <link rel="stylesheet" href="/css/signUp.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    Participant sign up
+    <%- include("./header_login.ejs") %>
+    <div class="container">
+        <div class="form-style-5">
+            <form>
+                <fieldset>
+                    <legend><span class="number"> </span> Start</legend>
+                    <input type="text" name="field1" placeholder="Your Full Name *">
+                    <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
+                    <input type="email" name="field2" placeholder="Your Email *">
+                    <input type="password" name="field3" placeholder="Your Password*">
+                    <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
+                    <label for="job">Interests:</label>
+                    <select id="job" name="field4" value="select">
+                        <!--<optgroup label="Indoors">-->
+                        <option value="Architecture">Architecture</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Biomedicine">Biomedicine</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Design">Design</option>
+                        <option value="Music">Music</option>
+                        <option value="Science">Science</option>
+                        <option value="etc">...</option>
+                        <!--</optgroup>-->
+                    </select>
+                </fieldset>
+                <input type="submit" value="Register Now" />
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
