@@ -5,6 +5,7 @@
     "logo search home profile notification logout";
     font-size: 18px;
 	border-bottom: 20px black;
+	/*background-color: #16a085;*/
 }
 
 img{
@@ -44,14 +45,15 @@ img{
   font-size: 15px;
 }
 .btn-home {
-  grid-area: home;
-  position: relative;
-  top: 20px;
-  width: 80px;
-  height: 40px;
-  line-height: 4px;
-  padding: 0;
-  border: none;
+    grid-area: home;
+    position: relative;
+    top: 20px;
+    width: 80px;
+    height: 40px;
+    line-height: 4px;
+    padding: 0;
+    border: none;
+	color: black;
 }
 
 .profile{
@@ -79,6 +81,7 @@ img{
   	line-height: 4px;
   	padding: 0;
   	border: none;
+    color: black;
 }
 
 .postbox{
