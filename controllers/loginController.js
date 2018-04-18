@@ -3,5 +3,5 @@ module.exports.forgotPw = function (req, res) {
 }
 
 module.exports.parHome = function (req, res) {
-    res.render('eos_participant_home');
+    res.render('participantHome');
 }

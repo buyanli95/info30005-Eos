@@ -9,12 +9,13 @@ const homeController = require('../controllers/homeController');
 router.get('/', indexController.homePage);
 
 router.get('/forgot_pw', loginController.forgotPw);
-router.get('/eos_participant_home', loginController.parHome);
+router.get('/participantHome', loginController.parHome);
 
 router.get('/participant_signup', signUpController.participantSignup);
 router.get('/provider_signup', signUpController.providerSignup);
 
 router.get('/eos_participant_profile', homeController.par_profile);
+router.get('/post', homeController.toPost);
 
 module.exports = router;
 

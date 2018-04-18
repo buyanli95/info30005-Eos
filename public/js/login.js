@@ -7,7 +7,7 @@ function login() {
     }else if(password.value === ""){
         alert("Please enter your Password.");
     }else if(email.value === "admin" && password.value === "110110"){
-        window.location.href = "/eos_participant_home";
+        window.location.href = "/participantHome";
     }else{
         alert("Incorrect Email or Password.");
     }
