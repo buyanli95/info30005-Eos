@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    height:100%;
+}
+.main{
+    height:100%;
+    display:table;
+    width:100%;
+    text-align:center;
+}
+.title{
+    display:table-row;
+    height:80px;
+    line-height:80px;
+}
+.main_box{
+    display:table-cell;
+}
+.content{
+    height:200px;
+    line-height:30px;
+}
+.sidebar{
+    width: 100px;
+    height:200px;
+    line-height: 200px;
+}
+.footer{
+    display:table;
+    height:128px;
+    width:100%;
+}
+.button{
+    display:table-cell;
+}
+.click{
+    text-align: center;
+}
+.context{
+    letter-spacing: 15px;
+}

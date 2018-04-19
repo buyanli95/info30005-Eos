@@ -1,0 +1,35 @@
+.main{
+    height:500px;
+    display:table;
+    width: 100%;
+}
+.module{
+    display:table-cell;
+}
+.sidebar{
+    width:400px;
+    height: 100%;
+}
+.Edit{
+    margin-top:25%;
+    text-align: center;
+}
+.photo{
+    margin-left:30%;
+}
+.info{
+    height:100%;
+    border:dashed;
+}
+.poster{
+    padding-left:400px;
+    height:500px;
+    display: table;
+    width: 100%;
+}
+.post{
+    display: table-cell;
+}
+
+
+

@@ -10,6 +10,7 @@ router.get('/', indexController.homePage);
 
 router.get('/forgot_pw', loginController.forgotPw);
 router.get('/participantHome', loginController.parHome);
+router.get('/eos_provider_profile', loginController.proProfile);
 
 router.get('/participant_signup', signUpController.participantSignup);
 router.get('/provider_signup', signUpController.providerSignup);
