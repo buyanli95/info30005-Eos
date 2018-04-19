@@ -10,23 +10,31 @@
 <body>
     <!--inherit the header(logo, login)-->
     <%- include("./header_login.ejs") %>
-    <div class="body">
-        <div class="slogan-grid">
-            <div class="slogan">Not about Jobs: Find out what you loves most!</div>
-        </div>
+    <div class="container">
+        <!--<div class="slogan-grid">-->
+            <!--<div class="slogan">Not about Jobs: Find out what you loves most!</div>-->
+        <!--</div>-->
 
         <div class="button1">
-            <p>Not about jobs</p>
-            <p>Look for opportunities</p>
-            <p>Know more about your future career</p><br>
-            <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='/participant_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Participant</button>
+            <div class="button1text">
+                <p>Not about jobs</p>
+                <p>Look for opportunities</p>
+                <p>Know more about your future career</p><br>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='/participant_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up</br>as</br>Participant</button>
+            </div>
         </div>
 
         <div class="button2">
-            <p>Provide ideas and opportunities</p>
-            <p>Share our stories and experience</p>
-            <p>Guide you to your dream</p><br>
-            <button type="button" class="btn btn-success btn-circle btn-xl" onclick="{location.href='/provider_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up as Provider</button>
+            <div class="button2text">
+                <p>Provide ideas and opportunities</p>
+                <p>Share our stories and experience</p>
+                <p>Guide you to your dream</p><br>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-success btn-circle btn-xl" onclick="{location.href='/provider_signup'}"><i class="glyphicon glyphicon-ok"></i>Sign Up</br>as</br>Provider</button>
+            </div>
         </div>
 
     </div>

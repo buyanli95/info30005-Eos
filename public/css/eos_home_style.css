@@ -1,65 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Gaegu:700');
 
 body{
+    background-image: url("https://source.unsplash.com/pxoZSTdAzeU/1920x1080");
+    background-position: center;
+    /*;background-size: 100% 100%*/
+    background-repeat: repeat-y;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
+    height: 200%;
     background-color: aliceblue;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.body{
+.container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-    "slogan slogan"
-    "left right";
-}
-
-.slogan-grid{
-    grid-area: slogan;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-.slogan{
-    grid-row: 2/3;
-    font-family: 'Gaegu', cursive;
-    font-size: xx-large;
-    text-align: center;
+            "topleft topright"
+            "topleft topright"
+            "none none"
+            "downleft downright"
+            "downleft downright";
 }
 
 .btn-circle.btn-xl {
-    width: 300px;
-    height: 100px;
+    width: 165px;
+    height: 130px;
     padding: 10px 16px;
     font-size: 24px;
     line-height: 1.33;
-    border-radius: 100px;
-}
-
-.btn-outline-success{
-    width: 300px;
-    height: 100px;
-    padding: 10px 16px;
-    font-size: 24px;
-    line-height: 1.33;
-    border-radius: 100px;
-}
-
-.page .button1 p{
-    font-family: 'Gaegu', cursive;
-    font-size: x-large;
-}
-
-.page .button2 p{
-    font-family: 'Gaegu', cursive;
-    font-size: x-large;
+    border-radius: 15px;
 }
 
 .button1{
-    grid-area: left;
-    text-align: center;
+    grid-area: downright;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "b1text b1button";
+    text-align: center;font-family: 'Gaegu', cursive;
+    font-size: 33px;
 }
+.button1 .button{
+    grid-area: b1button;
+}
+
 .button2{
-    grid-area: right;
+    grid-area: topright;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "b2text b2button";
     text-align: center;
+    font-family: 'Gaegu', cursive;
+    font-size: 33px;
 }
+.button2 .button{
+    grid-area: b2button;
+}
+
+.button1 .button1text p{
+    font-family: 'Gaegu', cursive;
+    font-size: 23px;
+    color: aliceblue;
+}
+
+.button2 .button2text p{
+    font-family: 'Gaegu', cursive;
+    font-size: 23px;
+    color: aliceblue;
+}
+

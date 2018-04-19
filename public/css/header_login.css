@@ -18,7 +18,7 @@ img{
     grid-area: logo;
     font-family: 'Gaegu', cursive;
     font-size: 100px;
-    background-color: #518BC5;
+    /*background-color: #518BC5;*/
     font-variant-position: inherit;
     left: 40px;
 }
@@ -31,7 +31,7 @@ img{
     grid-area: login;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color: #518BC5;
+    /*background-color: #518BC5;*/
 }
 
 .login{
