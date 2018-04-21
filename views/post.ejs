@@ -3,17 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Post</title>
+    <script src="/js/goBack.js"></script>
     <link rel="stylesheet" href="/css/post.css" type="text/css">
+    <link rel="stylesheet" href="/css/participant_home_topbar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
-    <%- include("./participantHomeTopbar.ejs") %>
+    <!--topbar-->
+    <div class="topbar">
+        <!--logo-->
+        <div class="logo">
+            <a href="/participantHome">
+                <img src="/image/eos_logo.png" alt="Logo is missing">
+            </a>
+        </div>
+    <!--search-->
+        <div class="search">
+            <!--<input type="text" id="search_bar" placeholder="Interests">-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    <!--home-->
+        <div class="buttons-coll">
+            <button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>
+        </div>
+    <!--profile-->
+        <div class="profile">
+            <a href="/eos_participant_profile">
+                <img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">
+            </a>
+        </div>
+    <!--notification-->
+        <div class="notif">
+            <img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">
+        </div>
+    <!--logout-->
+        <div class="buttons-coll">
+            <button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>
+        </div>
+    </div>
+
+    <hr class="seperator 100%">
+
+    <!--main page-->
     <div class="main">
+        <!--title-->
         <div class="title">
             <h1 id="tit">Ignite the creativity in every student</h1>
         </div>
-
+        <!--article-->
         <div class="main_box">
+            <!--status bar-->
             <div class="main_box sidebar">
 
             </div>
@@ -34,14 +77,21 @@
 
         </div>
     </div>
+    <!--bottom-->
     <div class ="footer">
+        <!--button-->
+        <div class="Like">
+            <div class="box">
+                <input name="like" type="image" src="image/Like.svg" onclick="this.src='image/Like2.svg'" />
+            </div>
 
-        <div class="button click">
-            <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='#'}"><i class="glyphicon glyphicon-ok"></i>Like</button>
         </div>
 
-        <div class="button click">
-            <button type="button" class="btn btn-info btn-circle btn-xl" onclick="{location.href='#'}"><i class="glyphicon glyphicon-ok"></i>Apply</button>
+        <div class="Apply">
+            <div class="box">
+                <input name="apply" type="image"  src="image/Apply.svg" onclick="this.src='image/Apply2.svg'"/>
+
+            </div>
         </div>
     </div>
 

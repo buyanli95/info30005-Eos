@@ -6,39 +6,46 @@ html,body{
     height:100%;
 }
 .main{
+    margin-top: 100px;
     height:100%;
     display:table;
     width:100%;
-    text-align:center;
 }
 .title{
     display:table-row;
     height:80px;
     line-height:80px;
+    text-align: center;
 }
 .main_box{
+    padding-top: 30px;
     display:table-cell;
 }
 .content{
+    width:800px;
     height:200px;
     line-height:30px;
+    text-align: justify;
 }
 .sidebar{
-    width: 100px;
+    width: 400px;
     height:200px;
     line-height: 200px;
 }
 .footer{
-    display:table;
-    height:128px;
-    width:100%;
-}
-.button{
-    display:table-cell;
-}
-.click{
-    text-align: center;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 700px;
+    display: table;
+
 }
 .context{
-    letter-spacing: 15px;
+    letter-spacing: 30px;
 }
+.Like,.Apply{
+    display:table-cell;
+    text-align: center;
+}
+
