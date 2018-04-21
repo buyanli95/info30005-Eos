@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Eos-Sign Up</title>
+    <script src="/js/signUp.js"></script>
     <link rel="stylesheet" href="/css/signUp.css">
+    <script src="js/signUp.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -15,10 +17,10 @@
             <form>
                 <fieldset>
                     <legend><span class="number"> </span> Start</legend>
-                    <input type="text" name="field1" placeholder="Institution/Company Name *">
+                    <input type="text" id="icName" placeholder="Institution/Company Name *">
                     <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
-                    <input type="email" name="field2" placeholder="Institution/Company Email *">
-                    <input type="password" name="field3" placeholder="Institution/Company Password*">
+                    <input type="email" id="icEmail" placeholder="Institution/Company Email *">
+                    <input type="password" id="icPassword" placeholder="Institution/Company Password*">
                     <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
                     <label for="job">Industry:</label>
                     <select id="job" name="field4" value="select">
@@ -34,7 +36,7 @@
                         <!--</optgroup>-->
                     </select>
                 </fieldset>
-                <input type="submit" value="Register Now" />
+                <input type="submit" value="Register and Login" onclick="providerSignup()"/>
             </form>
         </div>
     </div>
