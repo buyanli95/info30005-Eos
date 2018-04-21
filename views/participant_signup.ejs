@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <title>Eos-Sign Up</title>
     <link rel="stylesheet" href="/css/signUp.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="/js/signUp.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
 </head>
 <body>
     <%- include("./header_login.ejs") %>
@@ -14,10 +16,10 @@
             <form>
                 <fieldset>
                     <legend><span class="number"> </span> Start</legend>
-                    <input type="text" name="field1" placeholder="Your Full Name *">
+                    <input type="text" id="fullname" placeholder="Your Full Name *">
                     <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
-                    <input type="email" name="field2" placeholder="Your Email *">
-                    <input type="password" name="field3" placeholder="Your Password*">
+                    <input type="email" id="email" placeholder="Your Email *">
+                    <input type="password" id="password" placeholder="Your Password*">
                     <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
                     <label for="job">Interests:</label>
                     <select id="job" name="field4" value="select">
@@ -33,7 +35,7 @@
                         <!--</optgroup>-->
                     </select>
                 </fieldset>
-                <input type="submit" value="Register Now" />
+                <input type="submit" value="Register and Login" onclick="participantSignup()"/>
             </form>
         </div>
     </div>
