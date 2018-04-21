@@ -1,61 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="src/boardz.css">
-    <link rel="stylesheet" href="css/boardStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-    <style>
-        #p{
+    <title>PROFILE</title>
+     <style>
+        .image{
             border-radius:50%;
         }
     </style>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "image  image  middle middle middle middle middle middle"
+                                    ". .  right  right left left bottom bottom ";
+        }
+    </style>
+    <style>
+        .image{
+            grid-area: image;
+            font-family: Gabriola;
+        }
+    </style>
+    <style>
+        .picture{
+            border-radius:50%;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    <style>
+       .picture:hover{
+                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+       }
+    </style>
+    <style>
+        .pipo{
+            grid-area: pipo;
+        }
+    </style>
+    <style>
+        .p1{
+            grid-area: middle;
+        }
+    </style>
+    <style>
+        .p2{
+            grid-area: right;
+        }
+    </style>
+    <style>
+        .p3{
+            grid-area: left;
+        }
+    </style>
+    <style>
+        .p4{
+            grid-area: bottom;
+        }
+    </style>
+    <style>
+        #p1{
+            border-radius: 25px;
+            background-color: lightsteelblue;
+            border: 20px;
+            color: white;
+            padding: 15px 32px;
+             text-align: center;
+            display: inline-block;
+             font-size: 50px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 800px;
+            height: 300px;
+            text-decoration: none;
+            font-family: Gabriola;
+
+            }
+
+
+
+    </style>
+    <style>
+        #p1:hover{
+             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+    <style>
+        #p2:hover{
+             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+    <style>
+        #p3:hover{
+             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+    <style>
+        #p4:hover{
+             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+    <style>
+          #p2{
+              border-radius: 25px;
+              background-color: cornflowerblue;
+              border: 20px;
+              color: white;
+              padding: 15px 32px;
+               text-align: center;
+              display: inline-block;
+               font-size: 30px;
+              margin: 4px 2px;
+              cursor: pointer;
+              width: 250px;
+              height: 200px;
+              text-decoration: none;
+              font-family: Gabriola;
+              }
+      </style>
+
+          <style>
+              #p3{
+                  border-radius: 25px;
+                  background-color:steelblue;
+                  border:20px;
+                  color: white;
+                  padding: 15px 32px;
+                   text-align: center;
+                  display: inline-block;
+                   font-size: 30px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  width:250px ;
+                  height: 200px;
+                  text-decoration: none;
+                  font-family: Gabriola;
+                  }
+          </style>
+            <style>
+                #p4{
+                    border-radius: 25px;
+                    background-color: cadetblue;
+                    border: 20px;
+                    color: white;
+                    padding: 15px 32px;
+                     text-align: center;
+                    display: inline-block;
+                     font-size: 30px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    width: 250px;
+                    height: 200px;
+                    text-decoration: none;
+                    font-family: Gabriola;
+                    }
+            </style>
+
 
 </head>
-<body id="example1">
 
+<body>
 <%- include("./participantHomeTopbar.ejs") %>
 
+<div class="container">
 
-<div class="posts">
-    <div class="boardz centered-block beautiful">
-        <!--style2-->
-        <!--<div class="boardz centered-block beautiful">-->
-        <!--style3-->
-        <!--<div class="boardz centered-block fitted">-->
-        <ul>
-            <li>
-                <a class="ali" href="/post">
-                    <h1>Editable profile</h1>
-                    1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-                </a>
-            </li>
-
-            <li>
-                <h1>post liked</h1>*
-                Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h1>post signed up</h1>
-                Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h1>quiz</h1>*
-                Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-            </li>
-
-        </ul>
+    <div class="image">
+    <img  src="http://img2.touxiang.cn/file/20170630/56f72c829d88f88f042a3ab9a56228b6.jpg" class="picture" height="500" width="500">
+        <h1>     </h1>
+        <h1>   lv2  </h1>
+      <h1>Lay    zhang</h1>
     </div>
+
+
+
+
+    <div class="p1">
+       <a href="#" class="button" id="p1">Editable profile</a>
+     </div>
+    <div class="p2">
+      <a href="/post_liked1" class="button" id="p2">Post liked</a>
+    </div>
+    <div class="p3">
+     <a href="#" class="button" id="p3">Post signed up</a>
+    </div>
+    <div class="p4">
+       <a href="#" class="button" id="p4">Quiz</a>
+     </div>
+    </div>
+    </div>
+
 </body>
 </html>

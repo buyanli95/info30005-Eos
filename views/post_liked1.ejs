@@ -8,26 +8,27 @@
     <style>
         .image{
             border-radius:50%;
-            font-family: Gabriola;
         }
     </style>
     <style>
         .container {
             display: grid;
-            grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: "image  image  middle middle middle middle middle middle"
-            ". .  right  right left left bottom bottom ";
+            grid-template-columns:  1fr 1fr  1fr 1fr ;
+            grid-template-rows: 1fr ;
+            grid-template-areas: "image  middle right left"
         }
     </style>
     <style>
         .image{
             grid-area: image;
+            font-family: Gabriola;
         }
     </style>
     <style>
         .picture{
             border-radius:50%;
+            width: 50%;
+            height: 50%;
         }
     </style>
     <style>
@@ -62,20 +63,20 @@
     </style>
     <style>
         #p1{
-            font-family: Gabriola;
             border-radius: 25px;
-            background-color: yellowgreen;
+            background-color: darkgray;
             border: 20px;
             color: white;
             padding: 15px 32px;
             text-align: center;
             display: inline-block;
-            font-size: 50px;
+            font-size: 30px;
             margin: 4px 2px;
             cursor: pointer;
-            width: 800px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             text-decoration: none;
+            font-family: Gabriola;
 
         }
 
@@ -104,9 +105,8 @@
     </style>
     <style>
         #p2{
-            font-family: Gabriola;
             border-radius: 25px;
-            background-color: mediumseagreen;
+            background-color: gray;
             border: 20px;
             color: white;
             padding: 15px 32px;
@@ -115,17 +115,17 @@
             font-size: 30px;
             margin: 4px 2px;
             cursor: pointer;
-            width: 250px;
+            width: 200px;
             height: 200px;
             text-decoration: none;
+            font-family: Gabriola;
         }
     </style>
 
     <style>
         #p3{
-            font-family: Gabriola;
             border-radius: 25px;
-            background-color:forestgreen;
+            background-color:dimgray;
             border:20px;
             color: white;
             padding: 15px 32px;
@@ -134,30 +134,12 @@
             font-size: 30px;
             margin: 4px 2px;
             cursor: pointer;
-            width:250px ;
+            width:200px ;
             height: 200px;
             text-decoration: none;
-        }
-    </style>
-    <style>
-        #p4{
             font-family: Gabriola;
-            border-radius: 25px;
-            background-color: darkgreen;
-            border: 20px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 250px;
-            height: 200px;
-            text-decoration: none;
         }
     </style>
-
 
 </head>
 
@@ -167,26 +149,23 @@
 <div class="container">
 
     <div class="image">
-        <img  src="https://i04picsos.sogoucdn.com/a3ead441722a4616" class="picture" height="500" width="500">
+        <img  src="http://img2.touxiang.cn/file/20170630/56f72c829d88f88f042a3ab9a56228b6.jpg" class="picture" height="500" width="500">
         <h1>     </h1>
-        <h1>     </h1>
-        <h1>Microsoft</h1>
+        <h1>   lv2  </h1>
+        <h1>Lay    zhang</h1>
     </div>
 
 
 
 
     <div class="p1">
-        <a href="#" class="button" id="p1">Editable profile</a>
+        <a href="#" class="button" id="p1">Post 1</a>
     </div>
     <div class="p2">
-        <a href="#" class="button" id="p2"> Add Post</a>
+        <a href="#" class="button" id="p2">Post 2</a>
     </div>
     <div class="p3">
-        <a href="#" class="button" id="p3">Post 1</a>
-    </div>
-    <div class="p4">
-        <a href="#" class="button" id="p4">Post 2</a>
+        <a href="#" class="button" id="p3">Post 3</a>
     </div>
 </div>
 </div>

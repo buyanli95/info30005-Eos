@@ -5,6 +5,7 @@ const indexController = require('../controllers/indexController');
 const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
 const homeController = require('../controllers/homeController');
+const postController = require('../controllers/postController');
 
 router.get('/', indexController.homePage);
 
@@ -17,6 +18,8 @@ router.get('/provider_signup', signUpController.providerSignup);
 
 router.get('/eos_participant_profile', homeController.par_profile);
 router.get('/post', homeController.toPost);
+
+router.get('/post_liked1', postController.postLiked);
 
 module.exports = router;
 
