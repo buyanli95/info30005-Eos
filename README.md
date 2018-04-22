@@ -1,4 +1,11 @@
 # info30005-Eos
 # web application
 
-# Aceess our web through https://eos-info30005.herokuapp.com/
+# Access our web through https://eos-info30005.herokuapp.com/
+# Login as participant through: 
+#par
+#pass
+
+# Login as provider through: 
+#pro
+#pass
