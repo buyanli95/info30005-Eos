@@ -1,0 +1,24 @@
+.form-gap {
+    padding-top: 70px;
+}
+.panel-default{
+    position: relative;
+    left: 170px;
+    /*top: 50px;*/
+    width: 130%;
+    height: 110%;
+}
+
+.text-center{
+    position: relative;
+    height: 40%;
+}
+
+.input-group-addon{
+    width: 15%;
+}
+
+.form .form-group .btn-block{
+    position: relative;
+    top: 10px;
+}

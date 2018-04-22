@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300i');
+
 *{
     margin:0;
     padding: 0;
@@ -16,10 +19,16 @@ html,body{
     height:80px;
     line-height:80px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 600i;
 }
 .main_box{
     padding-top: 30px;
     display:table-cell;
+}
+
+.brief{
+    font-family: 'Ubuntu', sans-serif;
 }
 .content{
     width:800px;
@@ -43,6 +52,8 @@ html,body{
 }
 .context{
     letter-spacing: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 400px;
 }
 .Like,.Apply{
     display:table-cell;

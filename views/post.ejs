@@ -11,48 +11,49 @@
 </head>
 <body>
     <!--topbar-->
-    <div class="topbar">
-        <!--logo-->
-        <div class="logo">
-            <a href="/participantHome">
-                <img src="/image/eos_logo.png" alt="Logo is missing">
-            </a>
-        </div>
-    <!--search-->
-        <div class="search">
-            <!--<input type="text" id="search_bar" placeholder="Interests">-->
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    <!--home-->
-        <div class="buttons-coll">
-            <button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>
-        </div>
-    <!--profile-->
-        <div class="profile">
-            <a href="/eos_participant_profile">
-                <img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">
-            </a>
-        </div>
-    <!--notification-->
-        <div class="notif">
-            <img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">
-        </div>
-    <!--logout-->
-        <div class="buttons-coll">
-            <button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>
-        </div>
-    </div>
+    <!--<div class="topbar">-->
+        <!--&lt;!&ndash;logo&ndash;&gt;-->
+        <!--<div class="logo">-->
+            <!--<a href="/participantHome">-->
+                <!--<img src="/image/eos_logo.png" alt="Logo is missing">-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--&lt;!&ndash;search&ndash;&gt;-->
+        <!--<div class="search">-->
+            <!--&lt;!&ndash;<input type="text" id="search_bar" placeholder="Interests">&ndash;&gt;-->
+            <!--<form class="form-inline my-2 my-lg-0">-->
+                <!--<input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">-->
+                <!--<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--&lt;!&ndash;home&ndash;&gt;-->
+        <!--<div class="buttons-coll">-->
+            <!--<button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>-->
+        <!--</div>-->
+    <!--&lt;!&ndash;profile&ndash;&gt;-->
+        <!--<div class="profile">-->
+            <!--<a href="/eos_participant_profile">-->
+                <!--<img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--&lt;!&ndash;notification&ndash;&gt;-->
+        <!--<div class="notif">-->
+            <!--<img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">-->
+        <!--</div>-->
+    <!--&lt;!&ndash;logout&ndash;&gt;-->
+        <!--<div class="buttons-coll">-->
+            <!--<button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <%- include("./participantHomeTopbar.ejs") %>
 
-    <hr class="seperator 100%">
+    <!--<hr class="seperator 100%">-->
 
     <!--main page-->
     <div class="main">
         <!--title-->
         <div class="title">
-            <h1 id="tit">Ignite the creativity in every student</h1>
+            <h1 id="tit">Title of the Activity:</br> Ignite the creativity in every student</h1>
         </div>
         <!--article-->
         <div class="main_box">
@@ -63,7 +64,12 @@
 
             <div class="main_box content">
 
-                <p id="context">Every child is born full of creativity. Nurturing it is one of the most important things educators do. Creativity makes your students better communicators and problem solvers. It prepares them to thrive in today’s world — and to shape tomorrow’s. For 40 years, Apple has helped teachers unleash the creative potential in every student. And today, we do that in more ways than ever. Not only with powerful products, but also with tools, inspiration and curriculums to help you create magical learning experiences.
+                <div class="brief">
+                    This is the Brief of the Activity:</br>
+                    Not only with powerful products, but also with tools, inspiration and curriculums to help you create magical learning experiences. Apple products put complete freedom of expression in the hands of every student who uses them. iPad is simple enough for anyone to master from the start, and flexible enough to let students go wherever their ideas take them. Mac provides the power to pursue even the most ambitious projects. </br></br></br>
+                </div>
+
+                <p id="context">This is details of the activity.</br>Every child is born full of creativity. Nurturing it is one of the most important things educators do. Creativity makes your students better communicators and problem solvers. It prepares them to thrive in today’s world — and to shape tomorrow’s. For 40 years, Apple has helped teachers unleash the creative potential in every student. And today, we do that in more ways than ever. Not only with powerful products, but also with tools, inspiration and curriculums to help you create magical learning experiences.
                     Apple products put complete freedom of expression in the hands of every student who uses them. iPad is simple enough for anyone to master from the start, and flexible enough to let students go wherever their ideas take them. Mac provides the power to pursue even the most ambitious projects. And with a full suite of Apple‑designed apps made for creation, both iPad and Mac give students a canvas as limitless as their imaginations.We’ve developed tools to make it easy for you to guide how your students use devices and apps in the classroom, and to provide valuable insight into each student’s progress.
                     So you can focus on what’s most important: teaching.When students have more ways to express ideas, it changes how they think. They see things they wouldn’t otherwise see and make connections they wouldn’t otherwise make. With this in mind, we’ve worked with educators to design a new curriculum that helps you give students the skills to communicate through drawing, photography, music and filmmaking — and then fold these skills into every subject you teach. So your students can put maths equations to music, bring an illustrator’s eye to social studies, and make scientific processes come alive on film.
                     Coding is essential to help students thrive in a future driven by technology. We created the comprehensive Everyone Can Code curriculum with lessons on iPad and Mac, teacher guides and apps to make it easy to teach coding in your classroom. Because we believe coding isn’t extracurricular — it’s part of the core curriculum.

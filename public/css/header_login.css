@@ -54,6 +54,15 @@ img{
     position: relative;
     right: 30px;
 }
+/*button margin*/
+.login input[type="button"]{
+    background: #aab6c1;
+    border: 1px solid #16a085;
+}
+/*cursor-button effect */
+.login input[type="button"]:hover{
+    background: #cbd7e2;
+}
 
 .login gaegu{
     font-family: 'Gaegu', cursive;
