@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PROFILE</title>
+    <title>Participant-PROFILE</title>
      <style>
+         body{
+             background: url('http://thecodeplayer.com/uploads/media/geometry.png');
+         }
         .image{
             border-radius:50%;
             width: 150%;
@@ -28,6 +31,10 @@
                                     ". .  right  right left left bottom bottom ";
             position: relative;
             top: 100%;
+        }
+        .editbox{
+            position: relative;
+            top: 20%;
         }
     </style>
     <style>
@@ -184,7 +191,12 @@
 
 
     <div class="p1">
-       <a href="#" class="button" id="p1">Profile</a>
+        <a href="#" class="button" id="p1">
+            <div class="editbox" contenteditable="true">
+                Editable profile!<br>
+                Click and Go!
+            </div>
+        </a>
      </div>
     <div class="p2">
         <a href="/post_liked" class="button" id="p2">Post liked<br><br><p>This is a Board collection of posts that LAY liked<br><br>Viewable</p></a>
@@ -193,7 +205,7 @@
      <a href="/post_joined" class="button" id="p3">Post signed up<br><br><p>This is a Board collection of posts that LAY joined<br><br>Viewable</p></a>
     </div>
     <div class="p4">
-       <a href="#" class="button" id="p4">Quiz</a>
+       <a href="#" class="button" id="p4">Quiz<br><br><p>To see how intelligent you are!</p></a>
      </div>
     </div>
     </div>

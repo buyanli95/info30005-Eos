@@ -5,6 +5,10 @@
     /*grid-template-areas:*/
             /*"left main right";*/
 /*}*/
+body{
+    background: url('http://thecodeplayer.com/uploads/media/geometry.png');
+}
+
 .goback{
     grid-area: left;
 }

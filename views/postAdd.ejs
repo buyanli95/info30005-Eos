@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add A Post</title>
+    <%- include("./providerHomeTopbar.ejs") %>
+    <link rel="stylesheet" href="/css/postAdd.css">
+</head>
+<body>
+    <div class="editsec">
+        <div class="form-group" id="title">
+            <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
+            <textarea class="form-control" id="exampleTextarea" rows="2" placeholder="Give a title for your post! Tell your potential paticipants what activity you're providing!"></textarea>
+        </div>
+
+        <div class="form-group" id="brief">
+            <label for="exampleTextarea"><h1>Post Brief</h1></label>
+            <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="Brief here will be shown on the main page along with the past title. Make it attractive!"></textarea>
+        </div>
+
+        <div class="form-group" id="detail">
+            <label for="exampleTextarea"><h1>Post Details</h1></label>
+            <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="Give more detail about the activity, like location, time, anything useful would be great!"></textarea>
+        </div>
+    </div>
+    <div class="postnew">
+        <button onclick="{location.href='/post2'}">Post Now!</button>
+    </div>
+</body>
+</html>

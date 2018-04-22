@@ -1,8 +1,19 @@
 /*self-define*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300i');
+body{
+    background: url('http://thecodeplayer.com/uploads/media/geometry.png');
+}
+.brief{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    word-spacing: 0.3em;
+}
 .posts{
     display: grid;
     grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 1fr 13fr;
     grid-template-areas:
+    "brief brief brief"
     "left main right";
 }
 .beautiful{
@@ -17,6 +28,8 @@
     color: inherit;
     text-decoration: none;
 }
+
+
 
 /*orgin*/
 p {

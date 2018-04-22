@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
+body{
+    background: url('http://thecodeplayer.com/uploads/media/geometry.png');
+    font-family: 'Ubuntu', sans-serif;
+}
+.editsec{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 5fr;
+    grid-template-areas:
+            "left title right"
+            "left brief right"
+            "left detail right";
+    position: relative;
+    top: 80px;
+}
+
+#title{
+    grid-area: title;
+    color: #306a93;
+}
+
+#brief{
+    grid-area: brief;
+    position: relative;
+    top: 20px;
+    color: #306a93;
+}
+
+#detail{
+    grid-area: detail;
+    position: relative;
+    top: 40px;
+    color: #306a93;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*button*/
+
+body .postnew{
+    text-align:center;
+    position: relative;
+
+}
+body:before{
+    content:'';
+    height:100%;
+    display:inline-block;
+    vertical-align:middle;
+}
+.postnew button{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+.postnew button:hover{
+    background:#fff;
+    color:#1AAB8A;
+}
+.postnew button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+}
+.postnew button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.postnew button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
