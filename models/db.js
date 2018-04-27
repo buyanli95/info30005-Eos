@@ -1,19 +1,14 @@
-// const faker = require('faker');
-// const JobArea = [];
-// for(i=0; i<10; i++){
-//     JobArea[i] = faker.name.jobArea();
-// }
-// module.exports = JobArea;
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb', function(err){
-	if(err) throw err;
+// mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
+// let db = mongoose.connection;
 
-	console.log('connected to mongodb');
-})
+// db.once('open', function(){
+// 	console.log('Connect to MongoDB');
+// })
 
-var userSchema = mongoose.Schema({
-	fullname: String,
-	email: String,
-	password: String
-});
+// var userSchema = mongoose.Schema({
+// 	fullname: String,
+// 	email: String,
+// 	password: String
+// });

@@ -6,21 +6,19 @@
     <title>Eos-Sign Up</title>
     <link rel="stylesheet" href="/css/signUp.css">
     <script type="text/javascript" src="/js/signUp.js"></script>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-
 </head>
 <body>
     <%- include("./header_login.ejs") %>
     <div class="container">
         <div class="form-style-5">
-            <form>
+            <form method="POST" action="/users/register">
                 <fieldset>
                     <legend><span class="number"> </span> Start</legend>
-                    <input type="text" id="fullname" name='fullname' placeholder="Your Full UserName *">
-                    <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
-                    <input type="email" id="email" name='email' placeholder="Your Email *">
-                    <input type="password" id="password" name='password' placeholder="Your Password*">
-                    <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
+                    <input type="text" id="fullname" name="name" placeholder="Your Full Name *">
+                    <input type="email" id="email" name="email" placeholder="Your Email *">
+                    <input type="text" id="username" name="username" placeholder="Your UserName *">
+                    <input type="password" id="password" name="password" placeholder="Your Password*">
+                     <input type="password" id="password2" name="password2" placeholder="Confirm Password*">
                     <label for="job">Interests:</label>
                     <select id="job" name="field4" value="select">
                         <!--<optgroup label="Indoors">-->
@@ -35,7 +33,8 @@
                         <!--</optgroup>-->
                     </select>
                 </fieldset>
-                <input type="submit" value="Register and Login" onclick="participantSignup()"/>
+                <!-- <input type="submit" value="Register and Login" onclick="participantSignup()"/> -->
+                <input type="submit" value="Register and Login"/>
             </form>
         </div>
     </div>
