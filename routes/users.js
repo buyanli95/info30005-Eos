@@ -18,7 +18,7 @@ router.get('/participantHome', signUpController.participantSignupSubmit);
 router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
 //bring in the User Model
-let Participant = require('../models/users');
+let Participant = require('../models/participants');
 //participant register process
 router.post('/participantRegister', function(req, res){
 	// const name = req.body.name;
@@ -33,7 +33,7 @@ router.post('/participantRegister', function(req, res){
 	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
-	req.checkBody('password2', 'Password do not match').equals(req.body.password);
+	req.checkBody('password2', 'Password do not match').equals(password);
 
 	let errors = req.validationErrors();
 
@@ -44,7 +44,6 @@ router.post('/participantRegister', function(req, res){
 		console.log('222');
 	}else{
 		let newParticipant = new Participant({
-			// name: name,
 			email: email,
 			username: username,
 			password: password
