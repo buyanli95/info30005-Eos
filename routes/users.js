@@ -18,30 +18,22 @@ router.get('/participantHome', signUpController.participantSignupSubmit);
 router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
 //bring in the User Model
-let User = require('../models/users');
-
-//jump to Register form
-// router.get('/register', function(req, res){
-// 	res.render('register');
-// })
-
-//register process
-router.post('/register', function(req, res){
-	const name = req.body.name;
+let Participant = require('../models/users');
+//participant register process
+router.post('/participantRegister', function(req, res){
+	// const name = req.body.name;
 	const email = req.body.email;
 	const username = req.body.username;
 	const password = req.body.password;
 	const password2 = req.body.password2;
 	//set validation rules
 	//using express-validation
-	req.checkBody('name', 'Name is required').notEmpty();
+	// req.checkBody('name', 'Name is required').notEmpty();
 	req.checkBody('email', 'Email is required').notEmpty();
 	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
 	req.checkBody('password2', 'Password do not match').equals(req.body.password);
-
-	console.log('111');
 
 	let errors = req.validationErrors();
 
@@ -51,15 +43,79 @@ router.post('/register', function(req, res){
 		});
 		console.log('222');
 	}else{
-		let newUser = new User({
-			name: name,
+		let newParticipant = new Participant({
+			// name: name,
 			email: email,
 			username: username,
 			password: password
 		});
-		
 		console.log('333');
-		newUser.save(function(err){
+		newParticipant.save(function(err){
+					if(err){
+						console.log(err);
+						console.log('666');
+						return;
+					}else{
+						req.flash('success', 'You are now registered and can log in');
+						res.redirect('/users/login');
+						console.log('777');
+					}
+				});
+		// bcrypt.genSalt(10, function(err, salt){
+		// 	console.log('444');
+		// 	bcrypt.hash(newUser.password, salt, function(err, hash){
+		// 		if(err){
+		// 			console.log(err);
+		// 		}
+		// 		console.log('555');
+		// 		newUser.password = hash;
+		// 		newUser.save(function(err){
+		// 			if(err){
+		// 				console.log(err);
+		// 				return;
+		// 			}else{
+		// 				req.flash('success', 'You are now registered and can log in');
+		// 				res.redirect('/users/login');
+		// 			}
+		// 			console.log('666');
+		// 		});
+		// 	});
+		// });
+	}
+});
+
+let Provider = require('../models/users');
+//provider register process
+router.post('/providerRegister', function(req, res){
+	// const name = req.body.name;
+	const email = req.body.email;
+	const cname = req.body.cname;
+	const password = req.body.password;
+	const password2 = req.body.password2;
+	//set validation rules
+	//using express-validation
+	// req.checkBody('name', 'Name is required').notEmpty();
+	req.checkBody('email', 'Email is required').notEmpty();
+	req.checkBody('email', 'Email is not valid').isEmail();
+	req.checkBody('cname', 'Cname is required').notEmpty();
+	req.checkBody('password', 'Password is required').notEmpty();
+	req.checkBody('password2', 'Password do not match').equals(req.body.password);
+
+	let errors = req.validationErrors();
+
+	if(errors){
+		res.render('provider_signup', {
+			errors: errors
+		});
+		console.log('222');
+		console.log(errors);
+	}else{
+		let newProvider = new Provider({
+			email: email,
+			cname: cname,
+			password: password
+		});
+		newProvider.save(function(err){
 					if(err){
 						console.log(err);
 						return;
@@ -102,23 +158,32 @@ let db = mongoose.connection;
 
 // Login Process
 router.post('/login', function(req, res){
-	console.log('777');
-  // 	passport.authenticate('local', {
-  //   failureRedirect:'/users/login',
-  //   successRedirect:'/participantHome',
-  //   failureFlash: true
-  // })(req, res, next);
-
-	var one = db.collection('users').findOne({username: req.body.username}, function(err, user){
- 		if(err) throw err;
- 		if(!user){
- 			console.log('user do not exist');
+	var roles = req.body.roles;
+ 	if(roles === "par"){
+ 		var par = db.collection('participants').findOne({username: req.body.username}, function(parErr, parUser){
+		if(parErr) throw parErr;
+		if(!parUser){
+			console.log('participant does not exist');
  			res.redirect('/');
- 		}else if(req.body.password === user.password){
- 			res.redirect('/participantHome');
- 		}
- 	})
-  console.log('999');
+		}else if(req.body.password === parUser.password){
+			res.redirect('/participantHome');
+		// }else{
+		
+		}
+	});
+ 	}else if(roles === "pro"){
+ 			var pro = db.collection('providers').findOne({username: req.body.username}, function(proErr, proUser){
+ 				if(proErr) throw proErr;
+ 				if(!proUser){
+ 					console.log('provider does not exist');
+ 					res.redirect('/');
+ 				}else if(req.body.password === proUser.password){
+ 					res.redirect('/eos_provider_profile');
+ 				}
+ 			})
+ 	}	
+
 });
+
 
 module.exports = router;

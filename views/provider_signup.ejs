@@ -14,13 +14,14 @@
 
     <div class="container">
         <div class="form-style-5">
-            <form>
+            <form method="POST" action="/users/providerRegister">
                 <fieldset>
                     <legend><span class="number"> </span> Start</legend>
-                    <input type="text" id="icName" placeholder="Institution/Company Name *">
                     <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
-                    <input type="email" id="icEmail" placeholder="Institution/Company Email *">
-                    <input type="password" id="icPassword" placeholder="Institution/Company Password*">
+                    <input type="email" id="icEmail" name="email" placeholder="Institution/Company Email *">
+                    <input type="text" id="icName" name="username" placeholder="Institution/Company Name *">
+                    <input type="password" id="icPassword" name="password" placeholder="Institution/Company Password*">
+                    <input type="password" id="icPassword2" name="password2" placeholder="Confirm Password*">
                     <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
                     <label for="job">Industry:</label>
                     <select id="job" name="field4" value="select">
@@ -36,7 +37,7 @@
                         <!--</optgroup>-->
                     </select>
                 </fieldset>
-                <input type="submit" value="Register and Login" onclick="providerSignup()"/>
+                <input type="submit" value="Register and Login"/>
             </form>
         </div>
     </div>

@@ -72,3 +72,7 @@ img{
 .header_login .login-grid .login a{
     color: antiquewhite;
 }
+
+.custom-select{
+    width: 10%;
+}
