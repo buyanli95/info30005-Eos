@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const mongoose = require('mongoose');
-// const User = require('../models/users');
+const expressValidator = require('express-validator');
 
 const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
@@ -28,12 +28,12 @@ router.post('/participantRegister', function(req, res){
 	const password2 = req.body.password2;
 	//set validation rules
 	//using express-validation
-	// req.checkBody('name', 'Name is required').notEmpty();
+	req.checkBody('name', 'Name is required').notEmpty();
 	req.checkBody('email', 'Email is required').notEmpty();
 	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
-	req.checkBody('password2', 'Password do not match').equals(password);
+	req.checkBody('password2', 'Password do not match').equals(req.body.password);
 
 	let errors = req.validationErrors();
 
@@ -41,23 +41,19 @@ router.post('/participantRegister', function(req, res){
 		res.render('participant_signup', {
 			errors: errors
 		});
-		console.log('222');
 	}else{
 		let newParticipant = new Participant({
 			email: email,
 			username: username,
 			password: password
 		});
-		console.log('333');
 		newParticipant.save(function(err){
 					if(err){
 						console.log(err);
-						console.log('666');
 						return;
 					}else{
 						req.flash('success', 'You are now registered and can log in');
 						res.redirect('/users/login');
-						console.log('777');
 					}
 				});
 		// bcrypt.genSalt(10, function(err, salt){
@@ -106,7 +102,6 @@ router.post('/providerRegister', function(req, res){
 		res.render('provider_signup', {
 			errors: errors
 		});
-		console.log('222');
 		console.log(errors);
 	}else{
 		let newProvider = new Provider({
@@ -121,7 +116,6 @@ router.post('/providerRegister', function(req, res){
 					}else{
 						req.flash('success', 'You are now registered and can log in');
 						res.redirect('/users/login');
-                        console.log('000');
 					}
 				});
 		// bcrypt.genSalt(10, function(err, salt){
