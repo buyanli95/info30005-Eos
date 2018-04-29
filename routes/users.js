@@ -83,7 +83,7 @@ router.post('/participantRegister', function(req, res){
 	}
 });
 
-let Provider = require('../models/users');
+let Provider = require('../models/providers');
 //provider register process
 router.post('/providerRegister', function(req, res){
 	// const name = req.body.name;
@@ -121,8 +121,8 @@ router.post('/providerRegister', function(req, res){
 					}else{
 						req.flash('success', 'You are now registered and can log in');
 						res.redirect('/users/login');
+                        console.log('000');
 					}
-					console.log('666');
 				});
 		// bcrypt.genSalt(10, function(err, salt){
 		// 	console.log('444');
@@ -167,18 +167,21 @@ router.post('/login', function(req, res){
 		}else if(req.body.password === parUser.password){
 			res.redirect('/participantHome');
 		// }else{
-		
 		}
-	});
+	})
  	}else if(roles === "pro"){
- 			var pro = db.collection('providers').findOne({username: req.body.username}, function(proErr, proUser){
+ 			var pro = db.collection('providers').findOne({cname: req.body.username}, function(proErr, proUser){
+ 				console.log(req.body.username);
+                console.log(proUser);
  				if(proErr) throw proErr;
  				if(!proUser){
  					console.log('provider does not exist');
  					res.redirect('/');
  				}else if(req.body.password === proUser.password){
  					res.redirect('/eos_provider_profile');
- 				}
+ 				}else{
+                    console.log(proUser);
+				}
  			})
  	}	
 
