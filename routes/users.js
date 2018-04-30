@@ -21,14 +21,12 @@ router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 let Participant = require('../models/participants');
 //participant register process
 router.post('/participantRegister', function(req, res){
-	// const name = req.body.name;
 	const email = req.body.email;
 	const username = req.body.username;
 	const password = req.body.password;
 	const password2 = req.body.password2;
 	//set validation rules
 	//using express-validation
-	req.checkBody('name', 'Name is required').notEmpty();
 	req.checkBody('email', 'Email is required').notEmpty();
 	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
@@ -36,6 +34,7 @@ router.post('/participantRegister', function(req, res){
 	req.checkBody('password2', 'Password do not match').equals(req.body.password);
 
 	let errors = req.validationErrors();
+	console.log(errors);
 
 	if(errors){
 		res.render('participant_signup', {
@@ -47,6 +46,7 @@ router.post('/participantRegister', function(req, res){
 			username: username,
 			password: password
 		});
+		console.log(newParticipant);
 		newParticipant.save(function(err){
 					if(err){
 						console.log(err);
@@ -57,12 +57,10 @@ router.post('/participantRegister', function(req, res){
 					}
 				});
 		// bcrypt.genSalt(10, function(err, salt){
-		// 	console.log('444');
 		// 	bcrypt.hash(newUser.password, salt, function(err, hash){
 		// 		if(err){
 		// 			console.log(err);
 		// 		}
-		// 		console.log('555');
 		// 		newUser.password = hash;
 		// 		newUser.save(function(err){
 		// 			if(err){
@@ -72,7 +70,6 @@ router.post('/participantRegister', function(req, res){
 		// 				req.flash('success', 'You are now registered and can log in');
 		// 				res.redirect('/users/login');
 		// 			}
-		// 			console.log('666');
 		// 		});
 		// 	});
 		// });
@@ -119,12 +116,10 @@ router.post('/providerRegister', function(req, res){
 					}
 				});
 		// bcrypt.genSalt(10, function(err, salt){
-		// 	console.log('444');
 		// 	bcrypt.hash(newUser.password, salt, function(err, hash){
 		// 		if(err){
 		// 			console.log(err);
 		// 		}
-		// 		console.log('555');
 		// 		newUser.password = hash;
 		// 		newUser.save(function(err){
 		// 			if(err){
@@ -134,7 +129,6 @@ router.post('/providerRegister', function(req, res){
 		// 				req.flash('success', 'You are now registered and can log in');
 		// 				res.redirect('/users/login');
 		// 			}
-		// 			console.log('666');
 		// 		});
 		// 	});
 		// });

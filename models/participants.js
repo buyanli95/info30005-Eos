@@ -15,4 +15,5 @@ const ParticipantSchema = mongoose.Schema({
 		required: true
 	},
 })
+
 const Participant = module.exports = mongoose.model('Participant', ParticipantSchema);
