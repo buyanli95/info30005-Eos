@@ -13,3 +13,6 @@ module.exports.providerSignup = function(req, res){
 module.exports.providerSignupSubmit = function (req, res) {
     res.render('eos_provider_profile');
 }
+
+
+
