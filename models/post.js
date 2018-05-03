@@ -14,9 +14,9 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    // like:{
-    //     type: Boolean
-    // },
+    like:{
+        type: Boolean
+    },
     // join:{
     //     type: Boolean
     // }
