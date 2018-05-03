@@ -20,4 +20,5 @@ const PostSchema = mongoose.Schema({
     join:{
         type: Boolean
     }
+    //edit
 })
