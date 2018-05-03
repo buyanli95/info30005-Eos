@@ -5,20 +5,20 @@
     <title>Add A Post</title>
     <%- include("./providerHomeTopbar.ejs") %>
     <link rel="stylesheet" href="/css/postAdd.css">
-    <!--&lt;!&ndash; include libraries(jQuery, bootstrap) &ndash;&gt;-->
-    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">-->
-    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>-->
-    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>-->
-
-    <!--&lt;!&ndash; include summernote css/js &ndash;&gt;-->
-    <!--<link href="/css/summernote.css" rel="stylesheet">-->
-    <!--<script src="/js/summernote.js"></script>-->
+    <!--summernote-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+    <!--calendar-->
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryui/style.css">
+
+
 </head>
 <body>
 
@@ -36,9 +36,16 @@
                             <label for="exampleTextarea"><h1>Post Details</h1></label>
                             <div id="summernote-detail"></div>
 
+                            <div class="calendar">
+                                <label for="exampleTextarea"><h1>DATE</h1></label>
+                                <input type="text" id="datepicker"></p>
+
+
                                 <div class="postnew">
                                     <button onclick="{location.href='/post2'}">Post Now!</button>
                                 </div>
+                            </div>
+
                         </div>
                 </div>
         </div>
@@ -69,6 +76,16 @@
             });
         });
     </script>
+
+<script>
+    var $$ = $.noConflict();
+    $$(function() {
+        $$( "#datepicker" ).datepicker({
+            showWeek: true,
+            firstDay: 1
+        });
+    });
+</script>
 </body>
 </html>
 

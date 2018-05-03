@@ -11,9 +11,25 @@ body{
     top: 50px;
 }
 
+.calendar{
+    grid-area: main;
+    position: relative;
+    top: 40px;
+}
+.calendar #datepicker{
+    position: relative;
+    top: -10px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
 #title{
     grid-area: main;
     color: #306a93;
+    position: relative;
+    top: 20px;
+    font-size: 10px;
 }
 
 #brief{
