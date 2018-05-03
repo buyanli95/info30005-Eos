@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const passport = require('passport');
-const mongoose = require('mongoose');
-const expressValidator = require('express-validator');
+
 
 const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
@@ -28,18 +26,6 @@ router.get('/login', function(req, res){
 });
 
 // Login Process
-router.post('/login', loginController.loginProecss);
-
-//using Passport validation
-// router.post('/login', function(req, res, next){
-//     var roles = req.body.roles;
-//     if(roles === "par"){
-//         passport.authenticate('local', {
-//             successRedirect:'/participantHome',
-//             failureRedirect:'/users/login',
-//             failureFlash: true
-//         })(req, res, next);
-// 	}
-// });
+router.post('/login', loginController.loginProcess);
 
 module.exports = router;
