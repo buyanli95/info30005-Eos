@@ -5,26 +5,64 @@
     <title>Add A Post</title>
     <%- include("./providerHomeTopbar.ejs") %>
     <link rel="stylesheet" href="/css/postAdd.css">
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 </head>
 <body>
+
     <div class="editsec">
         <div class="form-group" id="title">
             <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="2" placeholder="Give a title for your post! Tell your potential paticipants what activity you're providing!"></textarea>
+            <div id="summernote-title"></div>
+
+                <div class="form-group" id="brief">
+                    <label for="exampleTextarea"><h1>Post Brief</h1></label>
+                    <div id="summernote-brief"></div>
+
+
+                        <div class="form-group" id="detail">
+                            <label for="exampleTextarea"><h1>Post Details</h1></label>
+                            <div id="summernote-detail"></div>
+
+                                <div class="postnew">
+                                    <button onclick="{location.href='/post2'}">Post Now!</button>
+                                </div>
+                        </div>
+                </div>
         </div>
 
-        <div class="form-group" id="brief">
-            <label for="exampleTextarea"><h1>Post Brief</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="Brief here will be shown on the main page along with the past title. Make it attractive!"></textarea>
-        </div>
+    </div>
 
-        <div class="form-group" id="detail">
-            <label for="exampleTextarea"><h1>Post Details</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="Give more detail about the activity, like location, time, anything useful would be great!"></textarea>
-        </div>
-    </div>
-    <div class="postnew">
-        <button onclick="{location.href='/post2'}">Post Now!</button>
-    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#summernote-title').summernote({
+                placeholder: 'Hello bootstrap 4',
+                tabsize: 2,
+                height: 100
+            });
+        });
+        $(document).ready(function() {
+            $('#summernote-brief').summernote({
+                placeholder: 'Hello bootstrap 4',
+                tabsize: 2,
+                height: 200
+            });
+        });
+        $(document).ready(function() {
+            $('#summernote-detail').summernote({
+                placeholder: 'Hello bootstrap 4',
+                tabsize: 2,
+                height: 400
+            });
+        });
+    </script>
 </body>
 </html>
+

@@ -6,32 +6,30 @@ body{
 .editsec{
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 2fr 5fr;
-    grid-template-areas:
-            "left title right"
-            "left brief right"
-            "left detail right";
+    grid-template-areas:"left main right";
     position: relative;
-    top: 80px;
+    top: 50px;
 }
 
 #title{
-    grid-area: title;
+    grid-area: main;
     color: #306a93;
 }
 
 #brief{
-    grid-area: brief;
+    grid-area: main;
     position: relative;
     top: 20px;
     color: #306a93;
+    border: 1px hidden;
 }
 
 #detail{
-    grid-area: detail;
+    grid-area: main;
     position: relative;
     top: 40px;
     color: #306a93;
+    border: 1px hidden;
 }
 
 h1{
@@ -43,6 +41,8 @@ h1{
 body .postnew{
     text-align:center;
     position: relative;
+    border: 1px hidden;
+    margin-top: 100px;
 
 }
 body:before{
