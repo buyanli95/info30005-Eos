@@ -5,26 +5,68 @@
     <title>Add A Post</title>
     <%- include("./providerHomeTopbar.ejs") %>
     <link rel="stylesheet" href="/css/postAdd.css">
+    <!-- Include CSS for icons. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
-    <div class="editsec">
+    <div class="editsec" >
         <div class="form-group" id="title">
             <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="2" placeholder="Give a title for your post! Tell your potential paticipants what activity you're providing!"></textarea>
-        </div>
+            <div class="form-group" id="froala-editor-title"></div>
 
-        <div class="form-group" id="brief">
-            <label for="exampleTextarea"><h1>Post Brief</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="Brief here will be shown on the main page along with the past title. Make it attractive!"></textarea>
-        </div>
+            <div class="form-group" id="brief">
+                <label for="exampleTextarea"><h1>Post Brief</h1></label>
+                <div class="form-group" id="froala-editor-brief"></div>
 
-        <div class="form-group" id="detail">
-            <label for="exampleTextarea"><h1>Post Details</h1></label>
-            <textarea class="form-control" id="exampleTextarea" rows="20" placeholder="Give more detail about the activity, like location, time, anything useful would be great!"></textarea>
+                <div id="detail">
+                    <label for="exampleTextarea"><h1>Post Details</h1></label>
+                    <div class="form-group" id="froala-editor-detail"></div>
+
+                <div class="postnew">
+                    <button onclick="{location.href='/post2'}">Post Now!</button>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="postnew">
-        <button onclick="{location.href='/post2'}">Post Now!</button>
-    </div>
+
+    <!--<div id="froala-editor">-->
+        <!--<p>The editor's height will automatically adjust between the <code>heightMin</code> and <code>heightMax</code> values to fit the content inside the editable area.</p>-->
+        <!--<ul>-->
+            <!--<li><a href="../docs/options#heightMin" title="heightMin option" target="_blank">heightMin</a> will prevent the rich text editor's box being smaller than the value passed.</li>-->
+            <!--<li><a href="../docs/options#heightMax" title="heightMax option" target="_blank">heightMax</a> will prevent the rich text editor's box being taller than the value passed. If the text is too long, then the WYSIWYG HTML editor will get a vertical scrollbar.</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+
+
+    <!-- Include jQuery lib. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
+    <!-- Initialize the editor. -->
+    <script>
+        // $(function() {
+        //     $('textarea').froalaEditor()
+        // });
+        $('div#froala-editor-title').froalaEditor({
+            heightMin: 50,
+            heightMax: 250
+        });
+        $('div#froala-editor-brief').froalaEditor({
+            heightMin: 100,
+            heightMax: 250
+        });
+        $('div#froala-editor-detail').froalaEditor({
+            heightMin: 250,
+            heightMax: 1000
+        });
+
+    </script>
 </body>
 </html>
