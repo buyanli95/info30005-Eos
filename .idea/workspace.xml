@@ -2,269 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9df4df1-27be-4e49-a660-aa05bd91c8ce" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/settings.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/routes/posts.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/.jscsrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/.npmignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/AUTHORS.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/CONTRIBUTING.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/MIT-LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/load.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseJSON.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/script.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/xhr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/attr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/classes.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/prop.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/val.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/callbacks.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/access.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/parseHTML.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/curCSS.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/defaultDisplay.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/swap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/isHidden.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/Data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/accepts.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/data_priv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/data_user.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/deprecated.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/dimensions.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/Tween.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/ajax.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/alias.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/amd.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/global.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/intro.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/offset.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/outro.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue/delay.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-native.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-sizzle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/serialize.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/dist/sizzle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/data/empty.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/data/mixed_sort.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/data/testinit.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/unit/extending.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/unit/selector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/sizzle/test/unit/utilities.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/arr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/class2type.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/concat.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/hasOwn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/indexOf.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/pnum.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/push.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rnotwhite.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/slice.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/strundefined.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/support.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/toString.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/src/wrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/.npmignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/Gemfile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/Gruntfile.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/circle.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/jekyll.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/lib/simditor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/server.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/CNAME" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_data/button.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_data/configs.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_data/events.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_data/methods.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_includes/doc-sidebar.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_includes/footer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_includes/header.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_layouts/default.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_layouts/doc.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/_layouts/tour.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_coffee/page-demo.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_coffee/page-download.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_coffee/page-form.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_sass/app.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_sass/function.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_sass/highlight.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_sass/mobile.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/_sass/reset.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/fork.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/image.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/logo@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/title.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/images/title@2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/hotkeys.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/mobilecheck.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/module.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/page-demo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/page-doc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/page-download.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/page-form.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/simditor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/scripts/uploader.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/styles/app.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/styles/mobile.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/assets/styles/simditor.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/demo.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/docs/doc-config.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/docs/doc-dev-env.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/docs/doc-event.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/docs/doc-method.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/docs/doc-usage.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/extension.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/site/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/alignment-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/bold-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/code-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/font-scale-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/table-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/buttons/title-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/core-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/formatter-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/indentation-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/alignment-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/bold-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/code-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/font-scale-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/table-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/buttons/title-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/core-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/formatter-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/indentation-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/src/util.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/spec/util.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/alignment.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/blockquote.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/bold.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/button.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/code.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/color.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/font-scale.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/hr.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/image.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/indent.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/italic.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/link.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/list.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/outdent.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/popover.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/strikethrough.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/table.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/title.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/buttons/underline.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/clipboard.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/core.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/formatter.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/i18n.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/indentation.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/inputManager.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/keystroke.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/selection.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/toolbar.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/undoManager.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/src/util.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/styles/editor.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/styles/fonticon.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/styles/simditor.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/styles/simditor.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simditor/umd.hbs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/.npmignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/Gruntfile.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/circle.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/demo.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/lib/hotkeys.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/spec/hotkeys-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/spec/hotkeys-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/src/hotkeys.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-hotkeys/umd.hbs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/.npmignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/Gruntfile.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/lib/module.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/spec/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/spec/module-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/spec/module-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-module/src/module.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/.npmignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/Gruntfile.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/demo.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/lib/uploader.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/server.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/spec/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/spec/uploader-spec.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/spec/uploader-spec.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/src/uploader.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/simple-uploader/umd.hbs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change beforePath="$PROJECT_DIR$/controllers/participantSignupProcess.js" afterPath="$PROJECT_DIR$/controllers/participantSignupProcessController.js" />
+      <change beforePath="$PROJECT_DIR$/controllers/postController.js" afterPath="$PROJECT_DIR$/controllers/postController.js" />
+      <change beforePath="$PROJECT_DIR$/controllers/providerSignupController.js" afterPath="$PROJECT_DIR$/controllers/providerSignupProcessController.js" />
+      <change beforePath="$PROJECT_DIR$/models/post.js" afterPath="$PROJECT_DIR$/models/post.js" />
       <change beforePath="$PROJECT_DIR$/public/css/postAdd.css" afterPath="$PROJECT_DIR$/public/css/postAdd.css" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.js" afterPath="$PROJECT_DIR$/routes/routes.js" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
+      <change beforePath="$PROJECT_DIR$/views/header_login.ejs" afterPath="$PROJECT_DIR$/views/header_login.ejs" />
       <change beforePath="$PROJECT_DIR$/views/postAdd.ejs" afterPath="$PROJECT_DIR$/views/postAdd.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -282,68 +30,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state relative-caret-position="309">
+              <caret line="81" column="22" lean-forward="false" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
+      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participant_signup.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/participant_signup.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postAdd.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/postAdd.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="40" column="71" lean-forward="true" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postAdd.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/postAdd.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="providers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/providers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/post.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="203">
+              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -352,8 +50,78 @@
       <file leaf-file-name="postController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/postController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="270">
+              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="participant_signup.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/participant_signup.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="13" column="68" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postAdd.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/postAdd.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postAdd.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/postAdd.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="providerSignupProcessController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/providerSignupProcessController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="provider_signup.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/provider_signup.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -391,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/home_template.html" />
-        <option value="$PROJECT_DIR$/views/timeCounter.js" />
-        <option value="$PROJECT_DIR$/views/homestyle.css" />
         <option value="$PROJECT_DIR$/public/css/homestyle.css" />
         <option value="$PROJECT_DIR$/controllers/indexController.js" />
         <option value="$PROJECT_DIR$/public/js/timeCounter.js" />
@@ -415,8 +180,6 @@
         <option value="$PROJECT_DIR$/views/post_joined.ejs" />
         <option value="$PROJECT_DIR$/views/providerHomeTopbar.ejs" />
         <option value="$PROJECT_DIR$/views/postAdd.html" />
-        <option value="$PROJECT_DIR$/controllers/postController.js" />
-        <option value="$PROJECT_DIR$/routes/routes.js" />
         <option value="$PROJECT_DIR$/views/eos_home.ejs" />
         <option value="$PROJECT_DIR$/public/css/boardStyle_Likedpost.css" />
         <option value="$PROJECT_DIR$/public/css/eos_participant_profile.css" />
@@ -431,13 +194,20 @@
         <option value="$PROJECT_DIR$/public/css/boardStyle.css" />
         <option value="$PROJECT_DIR$/views/eos_participant_profile.ejs" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/views/header_login.ejs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/provider_signup.ejs" />
         <option value="$PROJECT_DIR$/models/participants.js" />
         <option value="$PROJECT_DIR$/models/users.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/config/settings.js" />
+        <option value="$PROJECT_DIR$/models/post.js" />
+        <option value="$PROJECT_DIR$/routes/routes.js" />
+        <option value="$PROJECT_DIR$/controllers/signUpController.js" />
+        <option value="$PROJECT_DIR$/controllers/participantSignupProcessController.js" />
+        <option value="$PROJECT_DIR$/views/participant_signup.ejs" />
+        <option value="$PROJECT_DIR$/views/header_login.ejs" />
+        <option value="$PROJECT_DIR$/routes/posts.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/controllers/postController.js" />
         <option value="$PROJECT_DIR$/views/postAdd.ejs" />
         <option value="$PROJECT_DIR$/public/css/postAdd.css" />
       </list>
@@ -527,7 +297,7 @@
               <item name="info30005-Eos-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="info30005-Eos-3" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="info30005-Eos-3" type="b2602c69:ProjectViewProjectNode" />
@@ -551,7 +321,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="jquery.min.js&#9;FILE&#9;file:///Users/buyanli/WebstormProjects/info30005-Eos-3/node_modules/simditor/site/assets/scripts/jquery.min.js&#10;simditor.css&#9;FILE&#9;file:///Users/buyanli/WebstormProjects/info30005-Eos-3/node_modules/simditor/styles/simditor.css&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="participantRegister&#9;null&#9;null&#10;jquery.min.js&#9;FILE&#9;file:///Users/buyanli/WebstormProjects/info30005-Eos-3/node_modules/simditor/site/assets/scripts/jquery.min.js&#10;simditor.css&#9;FILE&#9;file:///Users/buyanli/WebstormProjects/info30005-Eos-3/node_modules/simditor/styles/simditor.css&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -624,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67252000" />
+    <option name="totallyTimeSpent" value="72756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,13 +412,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18760064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767624" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37597913" sideWeight="0.12399356" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37597913" sideWeight="0.55958134" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767624" sideWeight="0.49355876" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37597913" sideWeight="0.8760064" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37597913" sideWeight="0.4404187" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -681,27 +451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/src/boardz.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/forgot_pw.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/boardz.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="51" column="3" lean-forward="false" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/participantHomeTopbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -869,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/signUp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -890,41 +632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/postController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/signUpController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,39 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/provider_signup.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/header_login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="173" column="40" lean-forward="true" selection-start-line="173" selection-start-column="40" selection-end-line="173" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/simditor/site/assets/styles/simditor.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -997,14 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/participant_signup.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1015,24 +689,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="278">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/signUpController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/header_login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="44" column="60" lean-forward="true" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/providerSignupProcessController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/participantSignupProcessController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/provider_signup.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="81" column="22" lean-forward="false" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/postController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/participant_signup.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="13" column="68" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/postAdd.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="40" column="71" lean-forward="true" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+        <state relative-caret-position="80">
+          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/postAdd.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        <state relative-caret-position="335">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -13,7 +13,7 @@ router.get('/forgot_pw', loginController.forgotPw);
 router.get('/participantHome', loginController.parHome);
 router.get('/eos_provider_profile', loginController.proProfile);
 
-
+//register page
 router.get('/participant_signup', signUpController.participantSignup);
 router.get('/participantHome', signUpController.participantSignupSubmit);
 router.get('/provider_signup', signUpController.providerSignup);

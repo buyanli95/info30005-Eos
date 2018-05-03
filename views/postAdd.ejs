@@ -21,28 +21,28 @@
 
 </head>
 <body>
-
+<form method="POST" action="/users/addPostProcess">
     <div class="editsec">
-        <div class="form-group" id="title">
+        <!--title-->
+
+            <div class="form-group" id="title">
             <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
             <div id="summernote-title"></div>
-
+                <!--brief-->
                 <div class="form-group" id="brief">
                     <label for="exampleTextarea"><h1>Post Brief</h1></label>
                     <div id="summernote-brief"></div>
-
-
+                        <!--detail-->
                         <div class="form-group" id="detail">
                             <label for="exampleTextarea"><h1>Post Details</h1></label>
                             <div id="summernote-detail"></div>
-
+                            <!--calendar datepicker-->
                             <div class="calendar">
                                 <label for="exampleTextarea"><h1>DATE</h1></label>
                                 <input type="text" id="datepicker"></p>
-
-
+                                <!--button-->
                                 <div class="postnew">
-                                    <button onclick="{location.href='/post2'}">Post Now!</button>
+                                    <button type="submit">Post Now!</button>
                                 </div>
                             </div>
 
@@ -51,6 +51,8 @@
         </div>
 
     </div>
+</form>
+
 
 
     <script>
@@ -86,6 +88,7 @@
         });
     });
 </script>
+
 </body>
 </html>
 

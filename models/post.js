@@ -14,6 +14,10 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    date:{
+        type: Date,
+        required: true
+    },
     like:{
         type: Boolean
     },

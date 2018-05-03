@@ -5,8 +5,8 @@ const bcrypt = require('bcryptjs');
 
 const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
-const providerSignupController = require('../controllers/providerSignupController');
-const participantSignupController = require('../controllers/participantSignupProcess');
+const providerSignupProcessController = require('../controllers/providerSignupProcessController');
+const participantSignupProcessController = require('../controllers/participantSignupProcessController');
 
 router.get('/forgot_pw', loginController.forgotPw);
 router.get('/participantHome', loginController.parHome);
@@ -17,8 +17,11 @@ router.get('/provider_signup', signUpController.providerSignup);
 router.get('/participantHome', signUpController.participantSignupSubmit);
 router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
-router.post('/participantRegister', participantSignupController.participantRegisterProcess);
-router.post('/providerRegister', providerSignupController.providerRegisterProcess);
+router.post('/participantRegister', participantSignupProcessController.participantRegisterProcess);
+router.post('/providerRegister', providerSignupProcessController.providerRegisterProcess);
+
+const postController = require("../controllers/postController");
+router.post('/addPostProcess', postController.addPostProcess);
 
 // Login Form
 router.get('/login', function(req, res){

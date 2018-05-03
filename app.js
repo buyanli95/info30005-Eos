@@ -79,8 +79,10 @@ app.use(passport.session());
 //allow app to make use of routes, the router is exported from the routes file
 const router = require('./routes/routes');
 const users = require('./routes/users');
+const posts = require('./routes/posts');
 app.use('/', router);
 app.use('/users', users);
+app.use('/posts', posts);
 
 
 const PORT = process.env.PORT || 3000;
