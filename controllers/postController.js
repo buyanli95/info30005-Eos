@@ -1,5 +1,9 @@
 //bring in The Post model
 Post = require("../models/post");
+//connect db
+mongoose = require('mongoose')
+mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
+let db = mongoose.connection;
 
 module.exports.postLiked = function(req, res){
     res.render('post_liked', {
@@ -9,20 +13,44 @@ module.exports.postLiked = function(req, res){
 module.exports.postJoined = function (req, res) {
     res.render('post_joined');
 }
+
+
+//fetchPost
 module.exports.providerPost = function (req, res) {
-    //get post content
-    const cname = req.session.cname;
-    const title = req.session.title;
+    //get cname of the post
+    const cname = req.session.cname
     res.locals.cname = cname;
-    res.locals.title = req.session.title;
-    res.render('post2');
+    //get title of the post
+    const title = req.session.title;
+    res.locals.title = title;
+
+    db.collection('posts').findOne({title: title}, function (err, postObj) {
+        if(err) throw err;
+        else if(!postObj){
+            console.log("fetchpost: post with this title does not exists");
+            console.log(title);
+            res.redirect('/eos_provider_profile');
+        }else if(postObj.cname === cname){
+            console.log("postObj found, title and cname matched!");
+            console.log(cname);
+            req.session.brief = postObj.brief;
+            req.session.detail = postObj.detail;
+            // req.session.date = postObj.date;
+            res.redirect('/post2');
+            console.log("done finding post");
+        }else{
+            console.log("something wrong");
+        }
+    });
 }
+
+//add a new post
 module.exports.addPost = function (req, res) {
     //allow postAdd.ejs use the value of cname
     const cname = req.session.cname;
-    const title = req.session.title;
     res.locals.cname = cname;
-    res.locals.title = title;
+    // const title = req.session.title;
+    // res.locals.title = title;
     res.render('postAdd');
 }
 

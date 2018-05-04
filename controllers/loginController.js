@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const session = require('session');
 const passport = require('passport');
 const expressValidator = require('express-validator');
+const Post = require("../models/post");
+
+mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
+let db = mongoose.connection;
 
 module.exports.forgotPw = function (req, res) {
     res.render('forgot_pw');
@@ -9,15 +13,31 @@ module.exports.forgotPw = function (req, res) {
 module.exports.parHome = function (req, res) {
     res.render('participantHome');
 }
+
+//eos_provider_profile
 module.exports.proProfile = function (req, res) {
     //get the username of provider AND keep it const
     const cname = req.session.cname;
     res.locals.cname = cname;
-    res.render('eos_provider_profile');
-}
 
-mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
-let db = mongoose.connection;
+    Post.find({}, function(err, posts){
+        if(err) throw err;
+        else if(!posts){
+            console.log("post does not found");
+        }else{
+            console.log(posts);
+            res.render('eos_provider_profile', {posts: posts});
+        }
+    });
+
+    //get exist posts
+    // db.collection('posts').find({cname: cname}, {title:1, brief:1, body:1}, function(err, postlist){
+    //     if(err) console.log(err);
+    //     console.log("postlist: " + postlist);
+    //     console.log(postlist[1]);
+    // })
+    // res.render('eos_provider_profile');
+}
 
 module.exports.loginProcess = function(req, res){
     var roles = req.body.roles;

@@ -212,9 +212,20 @@
         <img src="/image/plus.png" alt="plus is missing">
         </a>
     </div>
-    <div class="p3">
-        <a href="/post2" class="button" id="p3">Post 1</a>
-    </div>
+
+    <!--get a post-->
+    <h1>Node Blog</h1>
+
+    <% for(let i = 0; i < posts.length; i++) { %>
+    <article>
+        <p><%= posts[i].title %></p>
+    </article>
+    <% } %>
+
+        <div class="p3">
+            <a class="button" id="p3">Post</a>
+        </div>
+    
     <div class="p4">
         <a href="/post2" class="button" id="p4">Post 2</a>
     </div>
