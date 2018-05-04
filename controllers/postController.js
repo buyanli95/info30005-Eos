@@ -20,28 +20,28 @@ module.exports.providerPost = function (req, res) {
     //get cname of the post
     const cname = req.session.cname
     res.locals.cname = cname;
+    console.log(cname);
     //get title of the post
-    const title = req.session.title;
-    res.locals.title = title;
+    console.log(req.session.title);
 
-    db.collection('posts').findOne({title: title}, function (err, postObj) {
-        if(err) throw err;
-        else if(!postObj){
-            console.log("fetchpost: post with this title does not exists");
-            console.log(title);
-            res.redirect('/eos_provider_profile');
-        }else if(postObj.cname === cname){
-            console.log("postObj found, title and cname matched!");
-            console.log(cname);
-            req.session.brief = postObj.brief;
-            req.session.detail = postObj.detail;
-            // req.session.date = postObj.date;
-            res.redirect('/post2');
-            console.log("done finding post");
-        }else{
-            console.log("something wrong");
-        }
-    });
+    // db.collection('posts').findOne({title: title}, function (err, postObj) {
+    //     if(err) throw err;
+    //     else if(!postObj){
+    //         console.log("fetchpost: post with this title does not exists");
+    //         console.log(title);
+    //         res.redirect('/eos_provider_profile');
+    //     }else if(postObj.cname === cname){
+    //         console.log("postObj found, title and cname matched!");
+    //
+    //         req.session.brief = postObj.brief;
+    //         req.session.detail = postObj.detail;
+    //         // req.session.date = postObj.date;
+    //         res.redirect('/post2');
+    //         console.log("done finding post");
+    //     }else{
+    //         console.log("something wrong");
+    //     }
+    // });
 }
 
 //add a new post
