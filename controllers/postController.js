@@ -10,11 +10,19 @@ module.exports.postJoined = function (req, res) {
     res.render('post_joined');
 }
 module.exports.providerPost = function (req, res) {
+    //get post content
+    const cname = req.session.cname;
+    const title = req.session.title;
+    res.locals.cname = cname;
+    res.locals.title = req.session.title;
     res.render('post2');
 }
 module.exports.addPost = function (req, res) {
     //allow postAdd.ejs use the value of cname
-    res.locals.cname = req.session.cname;
+    const cname = req.session.cname;
+    const title = req.session.title;
+    res.locals.cname = cname;
+    res.locals.title = title;
     res.render('postAdd');
 }
 
@@ -50,9 +58,9 @@ module.exports.addPostProcess = function (req, res) {
                 console.log(err);
                 return;
             }else{
-                res.redirect('/post2');
+                console.log("posted!");
+                res.redirect('/eos_provider_profile');
             }
-
         });
     }
 }
