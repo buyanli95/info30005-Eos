@@ -1,16 +1,18 @@
 const mongoose = require('mongoose');
+const session = require('session');
 const passport = require('passport');
 const expressValidator = require('express-validator');
 
 module.exports.forgotPw = function (req, res) {
     res.render('forgot_pw');
 }
-
 module.exports.parHome = function (req, res) {
     res.render('participantHome');
 }
-
 module.exports.proProfile = function (req, res) {
+    //get the username of provider AND keep it const
+    const cname = req.session.cname;
+    res.locals.cname = cname;
     res.render('eos_provider_profile');
 }
 
@@ -31,13 +33,15 @@ module.exports.loginProcess = function(req, res){
         })
     }else if(roles === "pro"){
         var pro = db.collection('providers').findOne({cname: req.body.username}, function(proErr, proUser){
-            console.log(req.body.username);
-            console.log(proUser);
             if(proErr) throw proErr;
             if(!proUser){
                 console.log('provider does not exist');
                 res.redirect('/');
             }else if(req.body.password === proUser.password){
+                // var session = req.session;
+                // session.obj = proUser.cname;
+                req.session.cname = proUser.cname;
+                // console.log("loginprocess: " +session.obj);
                 res.redirect('/eos_provider_profile');
             }else{
                 console.log(proUser);
@@ -46,6 +50,7 @@ module.exports.loginProcess = function(req, res){
     }
 }
 
+//Passport
 // module.exports.loginProcess = function(req, res){
 //     var roles = req.body.roles;
 //     if(roles === "par"){

@@ -18,6 +18,10 @@ const PostSchema = mongoose.Schema({
         type: Date,
         required: true
     },
+    cname:{
+        type: String,
+        required: true
+    },
     like:{
         type: Boolean
     },
@@ -26,3 +30,5 @@ const PostSchema = mongoose.Schema({
     }
     //edit
 })
+
+const Post = module.exports = mongoose.model('Post', PostSchema);

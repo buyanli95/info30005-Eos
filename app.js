@@ -29,6 +29,7 @@ app.use(express.static(__dirname + '/public'));
 
 //view engine
 app.set("view engine", 'ejs');
+app.use(flash());
 
 // Body Parser Middleware
 // parse application/x-www-form-urlencoded
@@ -74,6 +75,8 @@ require('./config/passport')(passport);
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 //Route files
 //allow app to make use of routes, the router is exported from the routes file

@@ -18,32 +18,45 @@
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="jqueryui/style.css">
 
+    <!--<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">-->
+    <!--&lt;!&ndash; Include the Quill library &ndash;&gt;-->
+    <!--<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>-->
 
 </head>
+
 <body>
+
+<!-- Create the editor container -->
+<!--<div id="editor">-->
+    <!--<p>Hello World!</p>-->
+    <!--<p>Some initial <strong>bold</strong> text</p>-->
+    <!--<p><br></p>-->
+<!--</div>-->
+
 <form method="POST" action="/users/addPostProcess">
     <div class="editsec">
         <!--title-->
-
+        <p><%= cname %></p>
             <div class="form-group" id="title">
             <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
-            <div id="summernote-title"></div>
+            <textarea id="summernote-title" name="title"></textarea>
                 <!--brief-->
                 <div class="form-group" id="brief">
                     <label for="exampleTextarea"><h1>Post Brief</h1></label>
-                    <div id="summernote-brief"></div>
+                    <textarea id="summernote-brief" name="brief"></textarea>
                         <!--detail-->
                         <div class="form-group" id="detail">
                             <label for="exampleTextarea"><h1>Post Details</h1></label>
-                            <div id="summernote-detail"></div>
+                            <textarea id="summernote-detail" name="detail"></textarea>
                             <!--calendar datepicker-->
                             <div class="calendar">
                                 <label for="exampleTextarea"><h1>DATE</h1></label>
-                                <input type="text" id="datepicker"></p>
+                                <input type="text" id="datepicker" name="date"></p>
                                 <!--button-->
                                 <div class="postnew">
                                     <button type="submit">Post Now!</button>
                                 </div>
+
                             </div>
 
                         </div>
@@ -53,6 +66,12 @@
     </div>
 </form>
 
+<!-- Initialize Quill editor -->
+<!--<script>-->
+    <!--var quill = new Quill('#editor', {-->
+        <!--theme: 'snow'-->
+    <!--});-->
+<!--</script>-->
 
 
     <script>
@@ -63,6 +82,7 @@
                 height: 100
             });
         });
+
         $(document).ready(function() {
             $('#summernote-brief').summernote({
                 placeholder: 'Hello bootstrap 4',
