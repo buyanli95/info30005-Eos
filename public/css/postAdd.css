@@ -106,3 +106,12 @@ body:before{
     width:100%;
     transition:800ms ease all;
 }
+
+/*quill*/
+.qcontainer{
+}
+#editor-container {
+    height: 375px;
+    border: 10px hidden;
+    margin-left: 100px;
+}

@@ -223,11 +223,10 @@
 
     <div class="p3">
     <% for(let i = 0; i < posts.length; i++) { %>
-    <% if(posts[i].cname == cname){ %>
-
-        <a href="/post2" class="button" id="p3"><%= posts[i].title %><br><%= posts[i].brief %></a>
-
-    <% }} %>
+        <% const pTitle = posts[i].title %>
+        <%= pTitle %>
+        <a href="/<%= cname %>/<%= pTitle %>" class="button" id="p3"><%= posts[i].title %><br><%= posts[i].brief %></a>
+    <% } %>
 
     </div>
 </div>

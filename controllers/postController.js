@@ -62,6 +62,8 @@ module.exports.addPostProcess = function (req, res) {
     const date = req.body.date;
     const cname = req.session.cname;
 
+    console.log(title.trim("<p>", "left"));
+
     req.checkBody('title', 'title is required').notEmpty();
     req.checkBody('brief', 'brief is required').notEmpty();
     req.checkBody('detail', 'detail is required').notEmpty();
