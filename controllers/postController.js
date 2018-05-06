@@ -6,10 +6,19 @@ mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
 let db = mongoose.connection;
 
 module.exports.postLiked = function(req, res){
-    res.render('post_liked', {
-        user: req.session.cname
+    res.locals.username = req.session.username;
+    //find posts
+    Post.find({}, function(err, posts){
+        if(err) throw err;
+        else if(!posts){
+            console.log("postLiked: there's no posts");
+        }else{
+            console.log(posts.length);
+            res.render('post_liked', {posts: posts});
+        }
     });
 }
+
 module.exports.postJoined = function (req, res) {
     res.render('post_joined');
 }

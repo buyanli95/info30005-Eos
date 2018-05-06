@@ -22,7 +22,7 @@ module.exports.parHome = function (req, res) {
         else if(!posts){
             console.log("arHome: there's no posts");
         }else{
-            res.render('participantHome', {posts: posts})
+            res.render('participantHome', {posts: posts});
         }
     });
 }
