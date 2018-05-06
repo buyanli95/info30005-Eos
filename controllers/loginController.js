@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const session = require('session');
 const passport = require('passport');
 const expressValidator = require('express-validator');
 const Post = require("../models/post");
@@ -10,22 +9,35 @@ let db = mongoose.connection;
 module.exports.forgotPw = function (req, res) {
     res.render('forgot_pw');
 }
+
+//login to participant Home page
 module.exports.parHome = function (req, res) {
-    res.render('participantHome');
+    //get username
+    const username = req.session.username;
+    res.locals.username = username;
+
+    //find posts
+    Post.find({}, function(err, posts){
+        if(err) throw err;
+        else if(!posts){
+            console.log("arHome: there's no posts");
+        }else{
+            res.render('participantHome', {posts: posts})
+        }
+    });
 }
 
-//eos_provider_profile
+//login to eos_provider_profile
 module.exports.proProfile = function (req, res) {
-    //get the username of provider AND keep it const
+    //get the username of provider(cname) AND keep it const
     const cname = req.session.cname;
     res.locals.cname = cname;
     //find exist posts
     Post.find({}, function(err, posts){
         if(err) throw err;
         else if(!posts){
-            console.log("post does not found");
+            console.log("proProfile: post does not found");
         }else{
-            // console.log(posts);
             res.render('eos_provider_profile', {posts: posts});
         }
     });
@@ -40,6 +52,8 @@ module.exports.loginProcess = function(req, res){
                 console.log('participant does not exist');
                 res.redirect('/');
             }else if(req.body.password === parUser.password){
+                //allow the participant homepage to access username
+                req.session.username = parUser.username;
                 res.redirect('/participantHome');
             }
         })
@@ -50,8 +64,6 @@ module.exports.loginProcess = function(req, res){
                 console.log('provider does not exist');
                 res.redirect('/');
             }else if(req.body.password === proUser.password){
-                // var session = req.session;
-                // session.obj = proUser.cname;
                 req.session.cname = proUser.cname;
                 // console.log("loginprocess: " +session.obj);
                 res.redirect('/eos_provider_profile');

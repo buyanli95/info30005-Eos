@@ -18,13 +18,6 @@ module.exports.postJoined = function (req, res) {
 //fetchPost
 module.exports.providerPost = function (req, res) {
     //get cname of the post
-
-    // var cname = req.params.cname;
-    // res.locals.cname = cname;
-    // //get title of the post
-    // var title = req.params.title;
-    // res.locals.title = title;
-
     var postid = req.params.id;
     var cname = req.session.cname;
 

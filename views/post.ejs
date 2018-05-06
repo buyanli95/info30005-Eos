@@ -16,26 +16,26 @@
     <div class="main">
         <!--title-->
         <div class="title">
-            <h1 id="tit">Title of the Activity:</br> Ignite the creativity in every student</h1>
+            <h1 id="tit"><%=  post.title %></h1>
         </div>
         <!--article-->
         <div class="main_box">
             <!--status bar-->
             <div class="main_box sidebar">
-
+                <%=  post.cname %>
+                <%=  post.date %>
             </div>
 
             <div class="main_box content">
 
                 <div class="brief">
-                    This is the Brief of the Activity:</br>
-                    Not only with powerful products, but also with tools, inspiration and curriculums to help you create magical learning experiences. Apple products put complete freedom of expression in the hands of every student who uses them. iPad is simple enough for anyone to master from the start, and flexible enough to let students go wherever their ideas take them. Mac provides the power to pursue even the most ambitious projects. </br></br></br>
+                    <%=  post.brief %><br>
+                    <p>The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria.[7] Times Higher Education ranks Melbourne as 33rd in the world,[8] while the Academic Ranking of World Universities places Melbourne 40th in the world (both first in Australia)</p>
                 </div>
 
-                <p id="context">This is details of the activity.</br>Every child is born full of creativity. Nurturing it is one of the most important things educators do. Creativity makes your students better communicators and problem solvers. It prepares them to thrive in today’s world — and to shape tomorrow’s. For 40 years, Apple has helped teachers unleash the creative potential in every student. And today, we do that in more ways than ever. Not only with powerful products, but also with tools, inspiration and curriculums to help you create magical learning experiences.
-                    Apple products put complete freedom of expression in the hands of every student who uses them. iPad is simple enough for anyone to master from the start, and flexible enough to let students go wherever their ideas take them. Mac provides the power to pursue even the most ambitious projects. And with a full suite of Apple‑designed apps made for creation, both iPad and Mac give students a canvas as limitless as their imaginations.We’ve developed tools to make it easy for you to guide how your students use devices and apps in the classroom, and to provide valuable insight into each student’s progress.
-                    So you can focus on what’s most important: teaching.When students have more ways to express ideas, it changes how they think. They see things they wouldn’t otherwise see and make connections they wouldn’t otherwise make. With this in mind, we’ve worked with educators to design a new curriculum that helps you give students the skills to communicate through drawing, photography, music and filmmaking — and then fold these skills into every subject you teach. So your students can put maths equations to music, bring an illustrator’s eye to social studies, and make scientific processes come alive on film.
-                    Coding is essential to help students thrive in a future driven by technology. We created the comprehensive Everyone Can Code curriculum with lessons on iPad and Mac, teacher guides and apps to make it easy to teach coding in your classroom. Because we believe coding isn’t extracurricular — it’s part of the core curriculum.
+                <p id="context">
+                    <%=  post.detail %><br>
+                <p>The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria.[7] Times Higher Education ranks Melbourne as 33rd in the world,[8] while the Academic Ranking of World Universities places Melbourne 40th in the world (both first in Australia)</p>
                 </p>
 
             </div>
