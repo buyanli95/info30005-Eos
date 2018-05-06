@@ -55,9 +55,13 @@ module.exports.addPost = function (req, res) {
 
 module.exports.addPostProcess = function (req, res) {
     //process post messages
-    const title = req.body.title;
-    const brief = req.body.brief;
-    const detail = req.body.detail;
+    var raw_title = req.body.title;
+    var raw_brief = req.body.brief;
+    var raw_detail = req.body.detail;
+
+    const title = raw_title.substring(3, raw_title.length-4);
+    const brief = raw_brief.substring(3, raw_brief.length-4);
+    const detail = raw_detail.substring(3, raw_detail.length-4);
     const date = req.body.date;
     const cname = req.session.cname;
 
