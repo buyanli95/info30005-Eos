@@ -18,30 +18,29 @@ module.exports.postJoined = function (req, res) {
 //fetchPost
 module.exports.providerPost = function (req, res) {
     //get cname of the post
-    const cname = req.session.cname
-    res.locals.cname = cname;
-    console.log(cname);
-    //get title of the post
-    console.log(req.session.title);
 
-    // db.collection('posts').findOne({title: title}, function (err, postObj) {
-    //     if(err) throw err;
-    //     else if(!postObj){
-    //         console.log("fetchpost: post with this title does not exists");
-    //         console.log(title);
-    //         res.redirect('/eos_provider_profile');
-    //     }else if(postObj.cname === cname){
-    //         console.log("postObj found, title and cname matched!");
-    //
-    //         req.session.brief = postObj.brief;
-    //         req.session.detail = postObj.detail;
-    //         // req.session.date = postObj.date;
-    //         res.redirect('/post2');
-    //         console.log("done finding post");
-    //     }else{
-    //         console.log("something wrong");
-    //     }
-    // });
+    // var cname = req.params.cname;
+    // res.locals.cname = cname;
+    // //get title of the post
+    // var title = req.params.title;
+    // res.locals.title = title;
+
+    var postid = req.params.id;
+    var cname = req.session.cname;
+
+    Post.findOne({_id: req.params.id}, function(err, postObj){
+        if(err) throw err;
+        else if(!postObj){
+            console.log("post not exist!");
+            res.redirect('/eos_provider_profile')
+        }else if(postObj.cname === req.params.cname){
+            // res.locals.title = postObj.title;
+            // res.locals.brief = postObj.brief;
+            // res.locals.detail = postObj.detail;
+            console.log(postObj);
+            res.render('post2',{post: postObj});
+        }
+    });
 }
 
 //add a new post

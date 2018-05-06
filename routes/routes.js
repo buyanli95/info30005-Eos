@@ -24,7 +24,7 @@ router.get('/post', homeController.toPost);
 
 router.get('/post_liked', postController.postLiked);
 router.get('/post_joined', postController.postJoined);
-router.get('/post2', postController.providerPost);
+router.get('/post2/:cname/:id', postController.providerPost);
 router.get('/postAdd', postController.addPost);
 
 module.exports = router;
