@@ -7,93 +7,113 @@
     <link rel="stylesheet" href="css/parHomeStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--Cascading grid layout library-->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <scirpt src="js/masonry.pkgd.min.js"></scirpt>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <%- include("./participantHomeTopbar.ejs") %>
     <!--<hr class="seperator 100%">-->
+        <div class="brief">
+            <h1>Welcome! Here we have various activities!</h1>
+            <h1>Provided by all kinds of companies and institutions</h1>
+            <h1>Explore and Join!</h1>
+        </div>
 
-    <div class="brief">
-        <h1>Welcome! Here we have various activities!</h1>
-        <h1>Provided by all kinds of companies and institutions</h1>
-        <h1>Explore and Join!</h1>
-    </div>
 
-    <%for(let i=0; i< posts.length; i++){ %>
-    <a href="/post/<%= posts[i]._id %>" class="button">
-        <h1><%= posts[i].title %></h1>
-        <b><%=  posts[i].brief %></b>
-    </a>
-    <%}%>
+        <div class="posts">
+            <div class="grid">
+                <%for(let i=0; i< posts.length; i++){ %>
 
-    <hr class="seperator 100%">
-
-    <div class="posts">
-        <div class="boardz centered-block beautiful">
-        <!--style2-->
-        <!--<div class="boardz centered-block beautiful">-->
-            <!--style3-->
-        <!--<div class="boardz centered-block fitted">-->
-            <ul>
-                <li>
-                    <a class="ali" href="/post">
-                    <h1>Viewable Board</h1>
-                        <b>Different boards are sharing the same template and style, this is the one used for post demonstration.</b></br>
-                        <b>This is the plance where the brief of the activity will be shown.</b></br>
-                        1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                <div class="grid-item">
+                    <a href="/post/<%= posts[i]._id %>" class="button ali">
+                        <h1><%= posts[i].title %></h1>
+                        <b><%=  posts[i].brief %></b>
                     </a>
-                </li>
-
-                <li>
-                    <h1>Unreadable Board-Constituam Adversarium</h1>*
-                    Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                    Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Unreadable Board - Eruditi</h1>
-                    Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Unreadable Board-Constituam Adversarium</h1>*
-                    Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                    Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-                </li>
-                <li>
-                    <h1>Unreadable Board-Eruditi</h1>
-                    Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Unreadable Board-Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-                <li>
-                    <h1>Unreadable Board-Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-                <li>
-                    <h1>Unreadable Board-Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-                <li>
-                    <h1>Unreadable Board-Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-                <li>
-                    <h1>Unreadable Board-Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-            </ul>
+                </div>
+                <%}%>
+            </div>
         </div>
 
 
 
-    </div>
+
+
+
+
+    <!--<div class="posts">-->
+        <!--<div class="boardz centered-block beautiful">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a class="ali" href="/post">-->
+                    <!--<h1>Viewable Board</h1>-->
+                        <!--<b>Different boards are sharing the same template and style, this is the one used for post demonstration.</b></br>-->
+                        <!--<b>This is the plance where the brief of the activity will be shown.</b></br>-->
+                        <!--1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.-->
+                    <!--</a>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Constituam Adversarium</h1>*-->
+                    <!--Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.-->
+                    <!--Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board - Eruditi</h1>-->
+                    <!--Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Constituam Adversarium</h1>*-->
+                    <!--Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.-->
+
+                    <!--Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Eruditi</h1>-->
+                    <!--Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Unreadable Board-Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+
+
+    <!--</div>-->
 </body>
+
+<script>
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 160,
+        horizontalOrder: false
+    });
+</script>
 </html>
