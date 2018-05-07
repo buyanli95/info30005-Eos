@@ -31,12 +31,26 @@ body{
 /*cascade layout*/
 .grid{
     grid-area: main;
-    max-width: 2200px;
+    max-width: 1200px;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    /*left: 5%;*/
 }
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .grid-item{
-    width: 250px;
+/*"columnWidth": 86*/
+    /*width: 250px;*/
+    width: 290px;
     background-color: #69b0dd;
-    margin: 0.2em;
+    margin: 0.4em;
     float: left;
     border: none !important;
     border-radius: 10px;
@@ -52,11 +66,22 @@ body{
     text-decoration: none;
 }
 
+.grid-item h1 {
+    margin: 10px 10px 10px 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid gray;
+}
+
+.grid-item b{
+
+}
+
 /*orgin*/
 p {
     letter-spacing: .01em;
     font-size: 1.5em;
     font-weight: 400;
+    margin: 0 10px 10px 10px;
 }
 .available-classes ul {
     letter-spacing: .01em;

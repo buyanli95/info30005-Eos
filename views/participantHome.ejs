@@ -10,8 +10,11 @@
 
     <!--Cascading grid layout library-->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <scirpt src="js/masonry.pkgd.min.js"></scirpt>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <scirpt type="text/javascript" src="/js/masonry.pkgd.min.js"></scirpt>
+
+    <!--<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <!--<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
 </head>
 <body>
     <%- include("./participantHomeTopbar.ejs") %>
@@ -24,24 +27,18 @@
 
 
         <div class="posts">
-            <div class="grid">
+            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100 }'>
                 <%for(let i=0; i< posts.length; i++){ %>
 
                 <div class="grid-item">
                     <a href="/post/<%= posts[i]._id %>" class="button ali">
                         <h1><%= posts[i].title %></h1>
-                        <b><%=  posts[i].brief %></b>
+                        <p><%=  posts[i].brief %></p>
                     </a>
                 </div>
                 <%}%>
             </div>
         </div>
-
-
-
-
-
-
 
     <!--<div class="posts">-->
         <!--<div class="boardz centered-block beautiful">-->
@@ -106,14 +103,16 @@
 
 
     <!--</div>-->
+
+    <!--<script>-->
+        <!--$('.grid').masonry({-->
+            <!--// options-->
+            <!--itemSelector: '.grid-item',-->
+            <!--columnWidth: 160,-->
+            <!--horizontalOrder: false-->
+        <!--});-->
+    <!--</script>-->
 </body>
 
-<script>
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: 160,
-        horizontalOrder: false
-    });
-</script>
+
 </html>
