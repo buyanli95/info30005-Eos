@@ -5,183 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Provider-PROFILE</title>
-    <style>
-        body{
-            background: url('http://thecodeplayer.com/uploads/media/geometry.png');
-        }
-        .image{
-            border-radius:50%;
-            font-family: Gabriola;
-            width: 150%;
-            height: 130%;
-        }
-        .username{
-             position: relative;
-             top: -100px;
-             left: 45px;
-         }
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-        .container {
-            display: grid;
-            grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: "image  image  middle middle middle middle middle middle"
-            ". .  right  right left left bottom bottom ";
-            position: relative;
-            top: 100%;
-        }
-    </style>
-    <style>
-        .image{
-            grid-area: image;
-        }
-    </style>
-    <style>
-        .picture{
-            border-radius:50%;
-        }
-    </style>
-    <style>
-        .picture:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-    </style>
-    <style>
-        .pipo{
-            grid-area: pipo;
-        }
-    </style>
-    <style>
-        .p1{
-            grid-area: middle;
-        }
-    </style>
-    <style>
-        .p2{
-            /*grid-area: right;*/
-        }
-    </style>
-    <style>
-        .p3{
-            grid-area: left;
-        }
-    </style>
-    <style>
-        .p4{
-            grid-area: bottom;
-        }
-    </style>
-    <style>
-        #p1{
-            font-family: Gabriola;
-            border-radius: 25px;
-            background-color: rgba(161, 212, 50, 0.73);
-            border: 20px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 50px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 800px;
-            height: 300px;
-            text-decoration: none;
-
-        }
-        .editbox{
-            position: relative;
-            top: 20%;
-        }
-
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-        #p1:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,800');
-        #p2:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        #p3:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-            height: auto;
-        }
-        #p4:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-    </style>
-    <style>
-        #p1{
-            font-family: 'Montserrat', sans-serif;
-        }
-        #p2{
-            font-family: Gabriola;
-            border-radius: 25px;
-            background-color: rgba(60, 179, 113, 0.7);
-            border: 20px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 250px;
-            height: 200px;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-        p{
-            color: #464c53;
-        }
-        #p2 img{
-            position: relative;
-            left: -0px;
-        }
-        #p3{
-            font-family: Gabriola;
-            border-radius: 25px;
-            background-color: rgba(34, 155, 34, 0.75);
-            border:20px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 15px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width:250px ;
-            height: auto;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
-    <style>
-        #p4{
-            font-family: Gabriola;
-            border-radius: 25px;
-            background-color: rgba(0, 100, 0, 0.71);
-            border: 20px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 250px;
-            height: 200px;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
+    <!--cascade layout-->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="/js/masonry.pkgd.min.js"></script>
     <link rel="stylesheet" href="/css/eos_provider_profile.css">
@@ -200,9 +24,9 @@
 
     <div class="image">
         <img  src="/image/google.png" class="picture" height="500" width="500">
-    </div>
-    <div class="username">
-        <h1><%= cname %></h1>
+        <div class="username">
+            <h1><%= cname %></h1>
+        </div>
     </div>
 
     <div class="p1">
@@ -214,38 +38,38 @@
         </a>
     </div>
 
+    <!--<div class="p2">-->
+        <!--<a href="/postAdd" class="button" id="p2"> Add A Post-->
+        <!--<img src="/image/plus.png" alt="plus is missing">-->
+        <!--</a>-->
+    <!--</div>-->
 
-    <div class="p2">
-        <a href="/postAdd" class="button" id="p2"> Add A Post
-        <img src="/image/plus.png" alt="plus is missing">
-        </a>
-    </div>
+
 
     <div class="p3">
-    <% for(let i = 0; i < posts.length; i++) { %>
-    <% if(posts[i].cname == cname){
-        const title = posts[i].title;
-    %>
-        <a href="/post2/<%= cname%>/<%= posts[i]._id %>" class="button" id="p3"><%= posts[i].title %><br><%= posts[i].brief %></a>
-
-    <% }} %>
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 70 }'>
+            <div class="grid-item">
+                <div class="p2">
+                    <a href="/postAdd" class="button" id="p2"> Add A Post
+                        <img src="/image/plus.png" alt="plus is missing">
+                    </a>
+                </div>
+            </div>
+            <% for(let i = 0; i < posts.length; i++) { %>
+            <% if(posts[i].cname == cname){
+             // const title = posts[i].title;
+            %>
+            <div class="grid-item">
+                <a href="/post2/<%= cname%>/<%= posts[i]._id %>" class="button ali" id="p3">
+                    <h1><%= posts[i].title %></h1>
+                    <%= posts[i].brief %>
+                </a>
+            </div>
+            <% }} %>
+        </div>
 
     </div>
 </div>
-
-
-
-<script>
-    // $('.grid').masonry({
-    //     // options
-    //     itemSelector: '.grid-item',
-    //     columnWidth: 10
-    // });
-    $('.grid').packery({
-        // options
-        itemSelector: '.grid-item'
-    });
-</script>
 
 </body>
 </html>
