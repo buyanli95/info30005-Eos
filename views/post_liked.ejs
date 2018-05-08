@@ -6,9 +6,12 @@
     <%- include("./participantHomeTopbar.ejs") %>
     <link rel="stylesheet" href="/css/post_liked.css">
     <link rel="stylesheet" href="src/boardz.css">
-    <link rel="stylesheet" href="css/boardStyle_Likedpost.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--Cascading grid layout library-->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <scirpt type="text/javascript" src="/js/masonry.pkgd.min.js"></scirpt>
 </head>
 <body>
 <div class="postContainer">
@@ -21,64 +24,69 @@
         </h1>
     </div>
 
-
-    <%for(let i=0; i< posts.length; i++){ %>
-    <a href="/post/<%= posts[i]._id %>" class="button">
-        <p><%= posts[i].title %></p><br>
-        <p><%=  posts[i].brief %></p>
-    </a>
-    <%}%>
-
-
     <div class="postsLiked">
-        <div class="boardz centered-block beautiful">
-            <!--style2-->
-            <!--<div class="boardz centered-block beautiful">-->
-            <!--style3-->
-            <!--<div class="boardz centered-block fitted">-->
-            <ul>
-                <li>
-                    <a class="ali" href="/post">
-                        <h1>Viewable Board</h1>
-                        <b>Different boards are sharing the same template and style, this is the one used for post demonstration.</b></br>
-                        <b>This is the plance where the brief of the activity will be shown.</b></br>
-                        1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-
-                    </a>
-                </li>
-                <li>
-                    <h1>Constituam Adversarium</h1>*
-                    Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                    Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Eruditi</h1>
-                    Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Constituam Adversarium</h1>*
-                    Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                    Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-                </li>
-                <li>
-                    <h1>Eruditi</h1>
-                    Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Fastidii Electram</h1>
-                    Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-                </li>
-            </ul>
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 73 }'>
+    <%for(let i=0; i< posts.length; i++){ %>
+            <div class="grid-item">
+                <a href="/post/<%= posts[i]._id %>" class="button ali">
+                    <h2><%= posts[i].title %></h2><br>
+                    <p><%=  posts[i].brief %></p>
+                </a>
+            </div>
+    <%}%>
         </div>
     </div>
+
+
+    <!--<div class="postsLiked">-->
+        <!--<div class="boardz centered-block beautiful">-->
+            <!--&lt;!&ndash;style2&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="boardz centered-block beautiful">&ndash;&gt;-->
+            <!--&lt;!&ndash;style3&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="boardz centered-block fitted">&ndash;&gt;-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a class="ali" href="/post">-->
+                        <!--<h1>Viewable Board</h1>-->
+                        <!--<b>Different boards are sharing the same template and style, this is the one used for post demonstration.</b></br>-->
+                        <!--<b>This is the plance where the brief of the activity will be shown.</b></br>-->
+                        <!--1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.-->
+
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Constituam Adversarium</h1>*-->
+                    <!--Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.-->
+
+                    <!--Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Eruditi</h1>-->
+                    <!--Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Constituam Adversarium</h1>*-->
+                    <!--Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.-->
+
+                    <!--Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<h1>Eruditi</h1>-->
+                    <!--Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<h1>Fastidii Electram</h1>-->
+                    <!--Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 </body>
 </html>
