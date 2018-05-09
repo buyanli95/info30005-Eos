@@ -1,0 +1,53 @@
+<!--Sign up page for participants-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit profile</title>
+    <link rel="stylesheet" href="/css/signUp.css">
+    <script type="text/javascript" src="/js/signUp.js"></script>
+    <style>
+        #container{
+            background-image: url("https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2017/04/blue/16903216-1-eng-GB/Blue_node_full_image_2.jpg");
+        }
+        .container{
+            float: left;
+        }
+    </style>
+</head>
+
+<body id="container">
+
+<div class="container">
+    <div class="form-style-5">
+        <form method="POST" action="/users/participant_edit">
+            <fieldset>
+                <legend><span class="number"> </span> participant profile</legend>
+                Email:<input type="email" id="email" name="email" placeholder="<%= participant.email %>" required>
+                User name:<input type="text" id="username" name="username" placeholder="<%= participant.username %>" required>
+                School:<input type="text" id="school" name="school" placeholder="your school name" required>
+                Major:<input type="text" id="major" name="major" placeholder="your major" required>
+                Grade:<input type="text" id="grade" name="grade" placeholder="your grade " required>
+
+                <label for="job">Interests:</label>
+                <select id="job" name="interest" value="select">
+                    <!--<optgroup label="Indoors">-->
+                    <option value="Architecture">Architecture</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Biomedicine">Biomedicine</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Design">Design</option>
+                    <option value="Music">Music</option>
+                    <option value="Science">Science</option>
+                    <option value="etc">...</option>
+                    <!--</optgroup>-->
+                </select>
+            </fieldset>
+            <!-- <input type="submit" value="Register and Login" onclick="participantSignup()"/> -->
+            <input type="submit" value="edit now"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

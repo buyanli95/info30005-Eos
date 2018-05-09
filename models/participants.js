@@ -14,6 +14,22 @@ const ParticipantSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
+    school:{
+        type: String,
+
+    },
+    major:{
+        type: String,
+
+    },
+    grade:{
+	    type:String,
+    },
+    Interests:{
+        type: String,
+    },
+
+
 })
 
 const Participant = module.exports = mongoose.model('Participant', ParticipantSchema);

@@ -2,7 +2,8 @@
 Post = require("../models/post");
 
 module.exports.par_profile = function (req, res) {
-    res.locals.username = req.session.username;
+    const username = req.session.username
+    res.locals.username = username;
     res.render('eos_participant_profile');
 }
 

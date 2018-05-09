@@ -6,6 +6,7 @@ const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
 const homeController = require('../controllers/homeController');
 const postController = require('../controllers/postController');
+const participant_editprocess = require('../controllers/participant_editprocess');
 
 router.get('/', indexController.homePage);
 
@@ -24,6 +25,10 @@ router.get('/post/:id', homeController.toPost);
 
 router.get('/post_liked', postController.postLiked);
 router.get('/post_joined', postController.postJoined);
+router.get('/edit', postController.edit);
+router.get('/edit2', postController.edit2);
+
+// router.get('/edit', participant_editprocess.participantedit);
 router.get('/post2/:cname/:id', postController.providerPost);
 router.get('/postAdd', postController.addPost);
 
