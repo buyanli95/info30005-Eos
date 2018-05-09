@@ -3,72 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <%- include("./participantHomeTopbar.ejs") %>
     <link rel="stylesheet" href="/css/post_liked.css">
-     <link rel="stylesheet" href="src/boardz.css">
-     <link rel="stylesheet" href="css/boardStyle_Likedpost.css">
+    <link rel="stylesheet" href="src/boardz.css">
+    <link rel="stylesheet" href="css/boardStyle_Likedpost.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/participant_home_topbar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/fullcalendar.min.css " rel= "stylesheet">
+    <link href="css/fullcalendar.print.min.css" rel="stylesheet" media="print">
+
+    <script src="/js/goBack.js"></script>
+    <script src='js/jquery-3.3.1.min.js'></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay,listWeek'
+                },
+                defaultDate: '2018-03-12',
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                ]
+            });
+
+        });
+
+    </script>
+    <style>
+
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>
 </head>
 <body>
-<div class="postContainer">
-		<div class="pimage">
-			<img  src="http://img2.touxiang.cn/file/20170630/56f72c829d88f88f042a3ab9a56228b6.jpg" class="picture" height="500" width="500">
-		</div>
-		<div class="ptitle">
-			<h1>
-				- Posts LAY Joined - 
-			</h1>
-		</div>
-		<div class="postsLiked">
-    	<div class="boardz centered-block beautiful">
-        <!--style2-->
-        <!--<div class="boardz centered-block beautiful">-->
-        <!--style3-->
-        <!--<div class="boardz centered-block fitted">-->
-        <ul>
-            <li>
-                <a class="ali" href="/post">
-                    <h1>Viewable Board</h1>
-                    <b>Different boards are sharing the same template and style, this is the one used for post demonstration.</b></br>
-                        <b>This is the plance where the brief of the activity will be shown.</b></br>
-                        1st board At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-                    
-                </a>
-            </li>
-            <li>
-                <h1>Constituam Adversarium</h1>*
-                Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h1>Eruditi</h1>
-                Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h1>Constituam Adversarium</h1>*
-                Cu simul oratio indoctum nam, cu offendit moderatius mel. Sea eu euismod consulatu, usu cu audiam perpetua, viris philosophia vis et. Cu sit tibique intellegam, error ludus scripta pri et. His congue aliquam iracundia ei. Has idque fastidii id, mucius erroribus vel ad. Ut posse albucius periculis his, duo an dicunt nostrud deleniti.
-
-                Modo affert expetenda per ne. Et dolore platonem appellantur cum. Constituam adversarium in sit, mea ne porro vitae, eu pri modus dicam quaeque. At nibh brute sonet sea. Mei simul disputando eu, id vis esse explicari dissentiet, ei agam volutpat usu. Ex vis tollit mollis oportere, mei probatus qualisque te. Mei labore voluptaria ex, mei graeci feugiat definiebas eu.
-            </li>
-            <li>
-                <h1>Eruditi</h1>
-                Lorem ipsum dolor sit amet, te ius feugait persecuti, eirmod tritani ad pro. Copiosae expetendis per no. Nec no enim solum inermis. Minim insolens instructior ne ius, nulla eruditi eam no. Et quo aeterno persecuti disputando, adhuc accusam sea no, an brute justo debitis quo. At eos ipsum putent.
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h1>Fastidii Electram</h1>
-                Vel adipisci suscipiantur te, nam ullum perfecto ut. Vitae contentiones id sed. Est vitae ponderum facilisis in. Quo illud eligendi similique et, odio detraxit pertinacia ea vix.
-            </li>
-        </ul>
+<div class="topbar">
+    <!--logo-->
+    <div class="logo">
+        <a href="/participantHome">
+            <img src="/image/eos_logo.png" alt="Logo is missing">
+        </a>
+    </div>
+    <!--search-->
+    <div class="search">
+        <!--<input type="text" id="search_bar" placeholder="Interests">-->
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <!--home-->
+    <div class="buttons-coll">
+        <button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>
+    </div>
+    <!--profile-->
+    <div class="profile">
+        <a href="/eos_participant_profile">
+            <img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">
+        </a>
+    </div>
+    <!--notification-->
+    <div class="notif">
+        <img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">
+    </div>
+    <!--logout-->
+    <div class="buttons-coll">
+        <button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>
     </div>
 </div>
-	</div>
+<hr class="seperator 100%">
+    <div id="calendar"></div>
 </body>
+
+
 </html>
