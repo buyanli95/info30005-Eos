@@ -52,7 +52,7 @@ module.exports.participanteditprofile= function(req, res) {
     const config = require('./config/database');
     mongoose.connect(config.database);
     let db = mongoose.connection;
-    dbo = db.
+
 
     // Participant.findOne({username: username}, function (err, participantObj) {
     //     if(err) throw err;
