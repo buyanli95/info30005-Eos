@@ -2,6 +2,8 @@
 Post = require("../models/post");
 Participant = require("../models/participants");
 Provider = require("../models/providers");
+LikedPost = require("../models/likedPost");
+
 //connect db
 mongoose = require('mongoose')
 mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');

@@ -1,8 +1,9 @@
 //bring in The Post model
 Post = require("../models/post");
 
+
 module.exports.par_profile = function (req, res) {
-    const username = req.session.username
+    const username = req.session.username;
     res.locals.username = username;
     res.render('eos_participant_profile');
 }
@@ -13,8 +14,7 @@ module.exports.toPost = function (req, res) {
         if(!postObj){
             console.log("parHome toPost: post does not exist!");
         }else{
-            res.render('post', {post: postObj});
+            res.render('post', {post: postObj, username: req.session.username});
         }
     });
-
 }

@@ -31,4 +31,5 @@ const PostSchema = mongoose.Schema({
     //edit
 })
 
+//post this schema as a model
 const Post = module.exports = mongoose.model('Post', PostSchema);

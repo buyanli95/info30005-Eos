@@ -1,98 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <scirpt type="text/javascript" src="/js/masonry.pkgd.min.js"></scirpt>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        * { box-sizing: border-box; }
 
-        body { font-family: sans-serif; }
 
-        /* ---- grid ---- */
 
-        .grid {
-            background: #EEE;
-            max-width: 1200px;
-            counter-reset: grid-item;
-        }
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
 
-        /* clearfix */
-        .grid:after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        /* ---- grid-item ---- */
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".title").click(function(){
+                    var id=$(this).data("ix");
+                    var name=$(this).data("name");
+                    alert("Id: "+id+" ; Name: "+name);});
+            });
 
-        .grid-item {
-            width: 160px;
-            height: 120px;
-            float: left;
-            background: #D26;
-            border: 2px solid #333;
-            border-color: hsla(0, 0%, 0%, 0.5);
-            border-radius: 5px;
-        }
-
-        .grid-item--width2 { width: 320px; }
-        .grid-item--width3 { width: 480px; }
-        .grid-item--width4 { width: 720px; }
-
-        .grid-item--height2 { height: 200px; }
-        .grid-item--height3 { height: 260px; }
-        .grid-item--height4 { height: 360px; }
-
-        .grid-item:before {
-            counter-increment: grid-item;
-            content: counter(grid-item);
-            display: block;
-            color: white;
-            padding-top: 0.2em;
-            text-align: center;
-            font-size: 1.4rem;
-        }
-    </style>
-</head>
-<body>
-<h1>Masonry - horizontalOrder</h1>
-
-<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 }'>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item grid-item--height3"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item grid-item--height2"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-</div>
-
-</body>
-
-<script>
-    // external js: masonry.pkgd.js
-
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 160,
-
-    });
-
-</script>
-</html>
+            // function onClick(e){
+            //     var id=e.getAttribute("data-id");
+            //     var name=e.getAttribute("data-name");
+            //     alert("Id: "+id+" ; Name: "+name);
+            // }
+            const testval = "val";
+        </script>
+    </head>
+    <body>
+    <div class="title" data-ix=testval.value() data-name="Microsoft">Click Me</div>
+    <!--<div id="add" data-id="2" data-name="Google" onclick="onClick(this)">Click Me</div>-->
+    </body>
+    </html>
