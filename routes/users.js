@@ -20,6 +20,7 @@ router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 // router.post('/participant_edit', participantSignupProcessController.participant_editprocessrofile);
 router.post('/participant_edit', participantSignupProcessController.participanteditprofile);
 
+router.post('/participantRegister', participantSignupProcessController.participantRegisterProcess);
 router.post('/providerRegister', providerSignupProcessController.providerRegisterProcess);
 
 const postController = require("../controllers/postController");

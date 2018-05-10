@@ -50,6 +50,8 @@ module.exports.loginProcess = function(req, res){
             if(parErr) throw parErr;
             if(!parUser){
                 console.log('participant does not exist');
+                // window.alert("User does not exist!");
+                req.flash("/", "user does not exist");
                 res.redirect('/');
             }else if(req.body.password === parUser.password){
                 //allow the participant homepage to access username
