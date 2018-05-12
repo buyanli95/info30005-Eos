@@ -26,40 +26,7 @@ module.exports.postLiked = function(req, res){
 module.exports.postJoined = function (req, res) {
     res.render('post_joined');
 }
-module.exports.edit = function (req, res) {
-    const username = req.session.username;
-    console.log("Cusername"+username);
-    Participant.findOne({username: username}, function(err, participantObj){
-        if(err) throw err;
-        else if(!participantObj){
-            console.log("participant not exist!");
-            res.redirect('/eos_participant_profile')
-        }else{
 
-            console.log("participant found: "+participantObj);
-            res.render('edit',{participant: participantObj});
-        }
-    });
-}
- module.exports.edit2 = function (req, res) {
-    //console.log("checkkkkkkkkkkkkkkkkkkkkkk");
-   //const cname = req.session.cname;
-     res.render('edit2');}
-//     console.log("Cname： "+cname);
-//     // Provider.findOne({cname: cname}, function(err, providerObj){
-//     //     if(err) throw err;
-//     //     else if(!providerObj){
-//     //         console.log("provider not exist!");
-//     //         res.redirect('/eos_provider_profile')
-//     //     }else{
-//     //         // res.locals.title = postObj.title;
-//     //         // res.locals.brief = postObj.brief;
-//     //         // res.locals.detail = postObj.detail;
-//     //         console.log("provider found: "+providerObj);
-// ,{provider: providerObj});}
-//     //     }
-//     // });
-// }
 
 //fetchPost
 module.exports.providerPost = function (req, res) {
