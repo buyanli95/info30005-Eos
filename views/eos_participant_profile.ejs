@@ -1,191 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <title>Participant-PROFILE</title>
-     <style>
-         body{
-             background: url('http://thecodeplayer.com/uploads/media/geometry.png');
-         }
-        .image{
-            border-radius:50%;
-            width: 150%;
-            height: 130%;
-        }
-         .username{
-             position: relative;
-             top: 200%;
-             left: 8%;
-         }
-
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-        .container {
-            display: grid;
-            grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: "image  image  middle middle middle middle middle middle"
-                                    ". .  right  right left left bottom bottom ";
-            position: relative;
-            top: 100%;
-        }
-        .editbox{
-            position: relative;
-            top: 20%;
-        }
-    </style>
-    <style>
-        .image{
-            grid-area: image;
-            font-family: Gabriola;
-        }
-    </style>
-    <style>
-        .picture{
-            border-radius:50%;
-            width: 50%;
-            height: 50%;
-        }
-    </style>
-    <style>
-       .picture:hover{
-                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
-       }
-    </style>
-    <style>
-        .pipo{
-            grid-area: pipo;
-        }
-    </style>
-    <style>
-        .p1{
-            grid-area: middle;
-        }
-    </style>
-    <style>
-        .p2{
-            grid-area: right;
-        }
-    </style>
-    <style>
-        .p3{
-            grid-area: left;
-        }
-    </style>
-    <style>
-        .p4{
-            grid-area: bottom;
-        }
-    </style>
-    <style>
-        #p1{
-            border-radius: 25px;
-            background-color: lightsteelblue;
-            border: 20px;
-            color: white;
-            padding: 15px 32px;
-             text-align: center;
-            display: inline-block;
-             font-size: 50px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 800px;
-            height: 300px;
-            text-decoration: none;
-            font-family: Gabriola;
-
-            }
-
-
-
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-        #p1:hover{
-             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,800');
-        #p2:hover{
-             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        #p3:hover{
-             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        #p4:hover{
-             box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-        #p1{
-            font-family: 'Montserrat', sans-serif;
-        }
-        #p2{
-              border-radius: 25px;
-              background-color: cornflowerblue;
-              border: 20px;
-              color: white;
-              padding: 15px 32px;
-               text-align: center;
-              display: inline-block;
-              margin: 4px 2px;
-              cursor: pointer;
-              width: 250px;
-              height: 200px;
-              text-decoration: none;
-              font-family: 'Montserrat', sans-serif;
-              }
-        p{
-            color: #464c53;
-        }
-              #p3{
-                  border-radius: 25px;
-                  background-color:steelblue;
-                  border:20px;
-                  color: white;
-                  padding: 15px 32px;
-                   text-align: center;
-                  display: inline-block;
-                  margin: 4px 2px;
-                  cursor: pointer;
-                  width:250px ;
-                  height: 200px;
-                  text-decoration: none;
-                  font-family: 'Montserrat', sans-serif;
-                  }
-                #p4{
-                    border-radius: 25px;
-                    background-color: cadetblue;
-                    border: 20px;
-                    color: white;
-                    padding: 15px 32px;
-                     text-align: center;
-                    display: inline-block;
-                    margin: 4px 2px;
-                    cursor: pointer;
-                    width: 250px;
-                    height: 200px;
-                    text-decoration: none;
-                    font-family: 'Montserrat', sans-serif;
-                    }
-            </style>
+    <link rel="stylesheet" href="/css/eos_participant_profile.css">
 </head>
 
 <body>
 <%- include("./participantHomeTopbar.ejs") %>
 
 <div class="container">
-
+    <!--user image-->
     <div class="image">
     <img  src="http://img2.touxiang.cn/file/20170630/56f72c829d88f88f042a3ab9a56228b6.jpg" class="picture" height="500" width="500">
     </div>
+    <!--username-->
     <div class="username">
         <h1><%= username %></h1>
     </div>
-
+    <!--user profile-->
     <div class="p1">
         <a href="/edit" class="button" id="p1">
             <div class="editbox" contenteditable="true">
@@ -194,17 +27,18 @@
             </div>
         </a>
      </div>
+    <!--post related part-->
     <div class="p2">
-        <a href="/post_liked" class="button" id="p2">Post liked<br><br><p>This is a Board collection of posts that LAY liked<br><br>Viewable</p></a>
+        <a href="/post_liked" class="button" id="p2">Post liked<br><br><p>This is a Board collection of posts that LAY liked</p></a>
     </div>
     <div class="p3">
-     <a href="/post_joined" class="button" id="p3">Post signed up<br><br><p>This is a Board collection of posts that LAY joined<br><br>Viewable</p></a>
+     <a href="/post_joined" class="button" id="p3">Post signed up<br><br><p>This is a Board collection of posts that LAY joined</p></a>
     </div>
+    <!--quiz-->
     <div class="p4">
-       <a href="#" class="button" id="p4">Quiz<br><br><p>To see how intelligent you are!</p></a>
+       <a href="https://app.brandquiz.io/jiahui-liang/technology-quiz-2702" class="button" id="p4">Quiz<br><br><p>To see how intelligent you are!</p></a>
      </div>
     </div>
     </div>
-
 </body>
 </html>

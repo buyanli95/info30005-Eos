@@ -9,6 +9,7 @@ const postController = require('../controllers/postController');
 const participant_editprocess = require('../controllers/participant_editprocess');
 const likedPostController = require('../controllers/likedPostController');
 const joinedPostController = require('../controllers/joinedPostController');
+const editProfileController = require('../controllers/editProfileController');
 
 router.get('/', indexController.homePage);
 
@@ -26,8 +27,8 @@ router.get('/eos_participant_profile', homeController.par_profile);
 router.get('/post/:id', homeController.toPost);
 
 
-router.get('/edit', postController.edit);
-router.get('/edit2', postController.edit2);
+router.get('/edit', editProfileController.edit);
+router.get('/edit2', editProfileController.edit2);
 
 // router.get('/edit', participant_editprocess.participantedit);
 router.get('/post2/:cname/:id', postController.providerPost);
