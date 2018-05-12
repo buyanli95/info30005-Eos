@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <title>Provider-PROFILE</title>
@@ -13,48 +11,39 @@
     <script src="/path/to/packery.pkgd.min.js"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
 </head>
 
 <body>
 <%- include("./providerHomeTopbar.ejs") %>
-
 <div class="container">
-
+    <!--logo-->
     <div class="image">
         <img  src="/image/google.png" class="picture" height="500" width="500">
         <div class="username">
             <h1><%= cname %></h1>
         </div>
     </div>
-
+    <!--profile-->
     <div class="p1">
-        <a href="/edit2" class="button" id="p1">
+        <a href="/edit2" class="button ali" id="p1">
             <div class="editbox" contenteditable="true">
                 Editable profile!<br>
                 Click and Go!
             </div>
         </a>
     </div>
-
-    <!--<div class="p2">-->
-        <!--<a href="/postAdd" class="button" id="p2"> Add A Post-->
-        <!--<img src="/image/plus.png" alt="plus is missing">-->
-        <!--</a>-->
+    <!--add a post & posts-->
+    <!--add a post-->
+    <!--<div class="grid-item">-->
+        <div class="postAdd">
+            <a href="/postAdd" class="button ali" id="p2"><p>Add a Post</p>
+                <img src="/image/plus.png" alt="plus logo" class="plus">
+            </a>
+        </div>
     <!--</div>-->
-
-
-
     <div class="p3">
-        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 70 }'>
-            <div class="grid-item">
-                <div class="p2">
-                    <a href="/postAdd" class="button" id="p2"> Add A Post
-                        <img src="/image/plus.png" alt="plus is missing">
-                    </a>
-                </div>
-            </div>
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100 }'>
+            <!--posted posts-->
             <% for(let i = 0; i < posts.length; i++) { %>
             <% if(posts[i].cname == cname){
              // const title = posts[i].title;

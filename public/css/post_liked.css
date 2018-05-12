@@ -60,7 +60,10 @@ body{
     flex: 1;
     top: 20%;
 }
-
+.center{
+    position: absolute;
+    left: 50px;
+}
 .grid:after {
     content: '';
     display: block;
