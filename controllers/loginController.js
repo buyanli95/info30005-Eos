@@ -75,18 +75,3 @@ module.exports.loginProcess = function(req, res){
         })
     }
 }
-
-//Passport
-// module.exports.loginProcess = function(req, res){
-//     var roles = req.body.roles;
-//     if(roles === "par"){
-//         console.log('participant login process');
-//         passport.authenticate('local', {
-//             successRedirect:'/participantHome',
-//             failureRedirect:'/login',
-//             failureFlash: true
-//         })
-// 	}
-//
-//
-// }
