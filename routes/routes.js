@@ -6,7 +6,9 @@ const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
 const homeController = require('../controllers/homeController');
 const postController = require('../controllers/postController');
-const editProfileController = require('../controllers/editProfileController');
+const participant_editprocess = require('../controllers/participant_editprocess');
+const likedPostController = require('../controllers/likedPostController');
+const joinedPostController = require('../controllers/joinedPostController');
 
 router.get('/', indexController.homePage);
 
@@ -23,13 +25,18 @@ router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 router.get('/eos_participant_profile', homeController.par_profile);
 router.get('/post/:id', homeController.toPost);
 
-router.get('/post_liked', postController.postLiked);
-router.get('/post_joined', postController.postJoined);
-router.get('/edit', editProfileController.edit);
-router.get('/edit2', editProfileController.edit2);
 
+router.get('/edit', postController.edit);
+router.get('/edit2', postController.edit2);
+
+// router.get('/edit', participant_editprocess.participantedit);
 router.get('/post2/:cname/:id', postController.providerPost);
 router.get('/postAdd', postController.addPost);
+
+// for join and like route
+router.post('/postuser/like', likedPostController.likedPost);
+router.post('/postuser/join', joinedPostController.joinedPost);
+router.get('/post_joined',postController.display);
 
 module.exports = router;
 

@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="css/parHomeStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.8/wing.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
     <!--Cascading grid layout library-->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <scirpt type="text/javascript" src="/js/masonry.pkgd.min.js"></scirpt>
+
+    <!--<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <!--<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
 </head>
 <body>
     <%- include("./participantHomeTopbar.ejs") %>
@@ -19,9 +24,10 @@
             <h1>Provided by all kinds of companies and institutions</h1>
             <h1>Explore and Join!</h1>
         </div>
+
+
         <div class="posts">
             <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100 }'>
-                <div class="center">
                 <%for(let i=0; i< posts.length; i++){ %>
 
                 <div class="grid-item">
@@ -30,11 +36,10 @@
                         <p><%=  posts[i].brief %></p>
                     </a>
                 </div>
-
-
                 <%}%>
-                </div>
             </div>
         </div>
 </body>
+
+
 </html>

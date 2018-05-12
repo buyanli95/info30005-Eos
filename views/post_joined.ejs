@@ -21,25 +21,6 @@
     <script src='js/fullcalendar.min.js'></script>
 
     <script>
-
-        $(document).ready(function() {
-
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay,listWeek'
-                },
-                defaultDate: '2018-03-12',
-                navLinks: true, // can click day/week names to navigate views
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                events: [
-                ]
-            });
-
-        });
-
     </script>
     <style>
 
@@ -94,7 +75,48 @@
 </div>
 <hr class="seperator 100%">
     <div id="calendar"></div>
+
+<script type="text/javascript">
+     function fermitTime(str){
+        var time = str.substring(0,3) + ' ' + str.substring(3,6) + ' ' + str.substring(6,8) + ' ' + str.substring(8, 12) + ' ' + str.substring(12, 20) + ' ' + str.substring(20, 27) + ' ' + str.substring(27, 33)
+        var now = new Date(time);
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1;
+        var date= now.getDate();
+        if(mon<10){
+            mon = '0'+mon;
+        };
+        if(date<10){
+            date = '0'+date;
+        }
+        var postDate = year+'-'+mon+'-'+date;
+        return postDate;
+
+    }
+
+
+    $(document).ready(function() {
+
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay,listWeek'
+        },
+        navLinks: true, // can click day/week names to navigate views
+        editable: false,
+        eventLimit: true, // allow "more" link when too many events
+        events: [
+          { title:'<%=event.title%>',
+            start: fermitTime('<%= event.date%>')}
+        ]
+      });
+
+    });
+    </script>
+
 </body>
+
 
 
 </html>

@@ -8,15 +8,18 @@
     <!--use require.js-->
     <!--<script src="/js/require.js" defer async="true" data-main="/js/likedPost"></script>-->
 
-    <!--<script src="/models/likedPost.js"></script>-->
-    <script src="/js/likedPost.js"></script>
+    <!--<script src="/modlikedPostController.jst.js"></script>-->
+    <!--<script src="likedPostController.jst.js"></script>-->
 
     <link rel="stylesheet" href="/css/post.css" type="text/css">
     <link rel="stylesheet" href="/css/participant_home_topbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!--like-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .invisible1, .invisible2, .invisible3, .invisible4, .invisible5, .invisible6 {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <%- include("./participantHomeTopbar.ejs") %>
@@ -60,22 +63,43 @@
         <!--button-->
         <div class="Like">
             <div class="box">
-                <!--<input name="like" type="image" src="image/Like.svg" onclick="this.src='image/Like2.svg'" />-->
+                <!--<input name="like" type="image" src="imlike.svg.svg" onclick="this.src='imlike2.svg.svg'" />-->
                 <%
                 const postid =  post._id;
                 const date = post.date;
                 const postobj = post;
+                const title = post.title;
+                const likeSrc = like === 1 ? '/image/like2.svg' : '/image/like.svg';
+                const joinSrc = join === 1 ? '/image/join2.svg' : '/image/join.svg';
                 %>
 
-                <!--<input name="like" type="image" src="/image/Like.svg" onclick="likeAPost(' ' + postid + ' ')"; />-->
-                <input name="like" type="image" src="/image/Like.svg" onclick="likeAPost('<%= username %>', '<%= postid%>', '<%= date%>');" />
+                <div class="invisible1">
+                <%- postid%>
+                </div>
+                <div class="invisible2">
+                <%- username%>
+                </div>
+                <div class="invisible3">
+                <%- date%>
+                </div>
+                <div class="invisible4">
+                <%- join%>
+                </div>
+                <div class="invisible5">
+                <%- like%>
+                </div>
+                <div class="invisible6">
+                <%- title%>
+                </div>
+                <!--<input name="like" type="image" src="/imlike.svg.svg" onclick="likeAPost(' ' + postid + ' ')"; />-->
+                <input class='like' name="like" type="image" src=<%= likeSrc%> onclick="postUser('like');" />
             </div>
             <p>Like</p>
         </div>
 
         <div class="Apply">
             <div class="box">
-                <input name="apply" type="image"  src="/image/Apply.svg" onclick="this.src='image/Apply2.svg'"/>
+                <input class='join' name="apply" type="image"  src=<%= joinSrc%> onclick="postUser('join')"/>
             </div>
             <p>Join</p>
         </div>
@@ -83,6 +107,52 @@
 
 
 </body>
+<!--like-->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    var username = $(".invisible2").text().replace(/[\r\n\ +]/g,"");
+    var postid = $(".invisible1").text().replace(/[\r\n\ +]/g,"");
+    var date = $(".invisible3").text().replace(/[\r\n\ +]/g,"");
+    var title = $(".invisible6").text().replace(/[\r\n\ +]/g,"");
+    var like = +$(".invisible5").text().replace(/[\r\n\ +]/g,"");
+    var join = +$(".invisible4").text().replace(/[\r\n\ +]/g,"");
+
+    console.log(username.replace(/[\r\n\ +]/g,""));
+    console.log(postid.replace(/[\r\n\ +]/g,""));
+    console.log(date.replace(/[\r\n\ +]/g,""));
+
+    function postUser(type) {
+      var src = $(`.${type}`)[0].src.split('/')[$(`.${type}`)[0].src.split('/').length - 1];
+      $(`.${type}`)[0].src = (src === `${type}.svg`) ? `/image/${type}2.svg` : `/image/${type}.svg`;
+      $.ajax({
+        type: 'POST',
+        url: type === 'like' ? '/postuser/like' : '/postuser/join',
+        data: { username, postid, date, title },
+        success: function (res) {
+//          alert(res);
+        }
+      });
+
+      if (type === 'like') {
+        if (!like) {
+          alert('like sucess');
+        }
+        else {
+          alert('cancel like sucess');
+        }
+        like = !like;
+      }
+      else if (type === 'join') {
+        if (!join) {
+          alert('join sucess');
+        }
+        else {
+          alert('cancel join sucess');
+        }
+        join = !join;
+      }
+    }
+</script>
 
 
 

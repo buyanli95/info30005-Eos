@@ -1,7 +1,4 @@
 /*jhl*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,800');
 
 body{
     background: url('http://thecodeplayer.com/uploads/media/geometry.png');
@@ -17,45 +14,56 @@ body{
     top: -100px;
     left: 45px;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
 .container {
     display: grid;
-    /*grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
-    /*grid-template-rows: 1fr 1fr 1fr;*/
-    /*grid-template-areas: "image  image  middle middle middle middle middle middle"*/
-    /*"left left left  left left left left left";*/
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 11fr;
-    grid-template-areas:
-            "image profile"
-            "addPost post";
+    grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "image  image  middle middle middle middle middle middle"
+    "left left left  left left left left left";
     position: relative;
-    top: 30px;
-
+    top: 100%;
 }
+
+  .image{
+      grid-area: image;
+  }
+
   .picture{
       border-radius:50%;
   }
+
   .picture:hover{
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
   .pipo{
       grid-area: pipo;
   }
+
   .p1{
-      grid-area: profile;
+      grid-area: middle;
       position: relative;
       float: left;
   }
-  .p3{
-      grid-area: post;
+
+  .p2{
+      grid-area: left;
   }
+
+  .p3{
+      grid-area: left;
+  }
+
   .p4{
       grid-area: bottom;
   }
+
   #p1{
       font-family: Gabriola;
       border-radius: 25px;
-      background-color: rgba(16, 109, 88, 0.7);
+      background-color: rgba(161, 212, 50, 0.73);
       border: 20px;
       color: white;
       padding: 15px 32px;
@@ -74,10 +82,14 @@ body{
     top: 20%;
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
 #p1:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     font-family: 'Montserrat', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,800');
 #p2:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -112,7 +124,10 @@ body{
 p{
     color: #464c53;
 }
-
+#p2 img{
+    position: relative;
+    left: -0px;
+}
 /*#p3{*/
     /*font-family: Gabriola;*/
     /*border-radius: 10px;*/
@@ -134,7 +149,7 @@ p{
   #p4{
       font-family: Gabriola;
       border-radius: 25px;
-      background-color: rgba(0, 100, 0, 0.57);
+      background-color: rgba(0, 100, 0, 0.71);
       border: 20px;
       color: white;
       padding: 15px 32px;
@@ -152,50 +167,19 @@ p{
 
 /*byl*/
 .image{
-    grid-area: image;
     position: relative;
     width: 100%;
-    height: 100%;
-    top: 50px;
+    height: 50%;
+    left: 10%;
 }
 .image .username{
     position: absolute;
     left: 20%;
     top: 50%;
 }
-a .button{
-    grid-area: addPost;
-    width: 240px;
-    height: 200px;
-    color: inherit;
-    text-decoration: none;
-}
-.postAdd .button p{
-    position: absolute;
-    left: 5em;
-    top: 1em;
-    color:#cbd7e2;
-}
-.postAdd{
-    grid-area: addPost;
-    width: 240px;
-    height: 200px;
-    background-color: rgba(16, 109, 88, 0.7);
-    border: 1em hidden;
-    border-radius: 2em;
-    margin: 2em;
-    position: relative;
-    top: 10px;
-    left: -50px;
-}
-.plus{
-    position: absolute;
-    top: 4em;
-    left: 4.2em;
-}
-.postAdd .ali{
-    color: inherit;
-    text-decoration: none;
+.container2{
+    border: 5px hidden;
+    margin: 10px;
 }
 /*cascade layout*/
 .grid{
@@ -205,8 +189,7 @@ a .button{
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    position: relative;
-    top: 1%;
+    top: 20%;
 }
 
 .grid:after {
@@ -218,9 +201,8 @@ a .button{
 .grid-item{
     /*"columnWidth": 86*/
     /*width: 250px;*/
-    width: 380px;
-    /*background-color: #118267;*/
-    background-color: #afbac5;
+    width: 250px;
+    background-color: #69b0dd;
     margin: 0.4em;
     float: left;
     border: none !important;

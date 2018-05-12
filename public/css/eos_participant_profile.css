@@ -1,185 +1,38 @@
-/*jhl*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,800');
-
 body{
     background: url('http://thecodeplayer.com/uploads/media/geometry.png');
 }
-.image{
-    border-radius:50%;
-    width: 150%;
-    height: 130%;
-    grid-area: image;
-    font-family: Gabriola;
-    position: absolute;
-    left: -2em;
+.main{
+    height:500px;
+    display:table;
+    width: 100%;
 }
-.username{
-    position: absolute;
-    top: 40%;
-    left: 7%;
+.module{
+    display:table-cell;
 }
-.container {
-    display: grid;
-    grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "image  image  middle middle middle middle middle middle"
-    ". .  right  right left left bottom bottom ";
-    position: relative;
-    top: 60px;
+.sidebar{
+    width:400px;
+    height: 100%;
 }
-.editbox{
-    position: relative;
-    top: 20%;
-}
-
-  .picture{
-      border-radius:50%;
-      width: 50%;
-      height: 50%;
-  }
-  .picture:hover{
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-  .pipo{
-      grid-area: pipo;
-  }
-  .p1{
-      grid-area: middle;
-  }
-  .p2{
-      grid-area: right;
-      position: relative;
-      top: 20px;
-  }
-  .p3{
-      grid-area: left;
-      position: relative;
-      top: 20px;
-  }
-  .p4{
-      grid-area: bottom;
-      position: relative;
-      top: 20px;
-  }
-  #p1{
-      border-radius: 25px;
-      background-color: lightsteelblue;
-      border: 20px;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 50px;
-      margin: 4px 2px;
-      cursor: pointer;
-      width: 800px;
-      height: 300px;
-      text-decoration: none;
-      font-family: Gabriola;
-  }
-#p1:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    font-family: 'Montserrat', sans-serif;
-}
-#p2:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#p3:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#p4:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#p1{
-    font-family: 'Montserrat', sans-serif;
-}
-#p2{
-    border-radius: 25px;
-    background-color: cornflowerblue;
-    border: 20px;
-    color: white;
-    padding: 15px 32px;
+.Edit{
+    margin-top:25%;
     text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 250px;
-    height: 200px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
 }
-p{
-    color: #464c53;
+.photo{
+    margin-left:30%;
 }
-#p3{
-    border-radius: 25px;
-    background-color:steelblue;
-    border:20px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    width:250px ;
-    height: 200px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+.info{
+    height:100%;
+    border:dashed;
 }
-#p4{
-    border-radius: 25px;
-    background-color: cadetblue;
-    border: 20px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 250px;
-    height: 200px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+.poster{
+    padding-left:400px;
+    height:500px;
+    display: table;
+    width: 100%;
 }
-
-/*byl*/
-/*body{*/
-    /*background: url('http://thecodeplayer.com/uploads/media/geometry.png');*/
-/*}*/
-/*.main{*/
-    /*height:500px;*/
-    /*display:table;*/
-    /*width: 100%;*/
-/*}*/
-/*.module{*/
-    /*display:table-cell;*/
-/*}*/
-/*.sidebar{*/
-    /*width:400px;*/
-    /*height: 100%;*/
-/*}*/
-/*.Edit{*/
-    /*margin-top:25%;*/
-    /*text-align: center;*/
-/*}*/
-/*.photo{*/
-    /*margin-left:30%;*/
-/*}*/
-/*.info{*/
-    /*height:100%;*/
-    /*border:dashed;*/
-/*}*/
-/*.poster{*/
-    /*padding-left:400px;*/
-    /*height:500px;*/
-    /*display: table;*/
-    /*width: 100%;*/
-/*}*/
-/*.post{*/
-    /*display: table-cell;*/
-/*}*/
+.post{
+    display: table-cell;
+}
 
 
 

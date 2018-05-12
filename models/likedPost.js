@@ -11,9 +11,13 @@ const LikedPostSchema = mongoose.Schema({
         require: true
     },
     date:{
-        type: Date,
+        type: String,
+        require: true
+    },
+    title: {
+        type: String,
         require: true
     }
 })
 
-const LikedPost = module.exports = mongoose.model('LikedPost', LikedPostSchema);
+const LikedPost = module.exports = mongoose.model('likedPost', LikedPostSchema);
