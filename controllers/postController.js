@@ -14,7 +14,7 @@ module.exports.display = function(req,res){
     let username = req.session.username;
     let postid = req.session.postid;
 
-    joinedPost.findOne({username:username} ,function(err,JoinObj){
+    joinedPost.find({username:username} ,function(err,JoinObj){
 
         if(err) throw err;
 
@@ -133,4 +133,18 @@ module.exports.addPostProcess = function (req, res) {
             }
         });
     }
+}
+
+module.exports.postLiked = function(req, res){
+    res.locals.username = req.session.username;
+    //find posts
+    Post.find({}, function(err, posts){
+        if(err) throw err;
+        else if(!posts){
+            console.log("postLiked: there's no posts");
+        }else{
+            console.log(posts.length);
+            res.render('post_liked', {posts: posts});
+        }
+    });
 }

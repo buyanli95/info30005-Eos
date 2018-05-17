@@ -38,6 +38,7 @@ router.get('/postAdd', postController.addPost);
 router.post('/postuser/like', likedPostController.likedPost);
 router.post('/postuser/join', joinedPostController.joinedPost);
 router.get('/post_joined',postController.display);
+router.get('/post_liked', postController.postLiked);
 
 module.exports = router;
 
