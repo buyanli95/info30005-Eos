@@ -29,6 +29,7 @@ router.get('/post/:id', homeController.toPost);
 
 router.get('/edit', editProfileController.edit);
 router.get('/edit2', editProfileController.edit2);
+router.get('/quiz', editProfileController.quiz);
 
 // router.get('/edit', participant_editprocess.participantedit);
 router.get('/post2/:cname/:id', postController.providerPost);

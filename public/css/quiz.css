@@ -26,71 +26,59 @@ body{
     left: -2em;
     grid-area: image1;
 }
-
-.username{
-    position: absolute;
-    top: 40%;
-    left: 7%;
-}
 .container {
     display: grid;
-    grid-template-columns:  1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "image  image  middle middle middle middle middle middle"
-    ". .  right  right left left bottom bottom ";
+    grid-template-columns:  1fr 1fr  1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "middle image right"
+    "left image1  bottom";
     position: relative;
-    top: 60px;
-}
-.editbox{
-    position: relative;
-    top: 20%;
-}
+    top: 60px;}
 
-  .picture{
-      border-radius:50%;
-      width: 50%;
-      height: 50%;
-  }
-  .picture:hover{
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-  .pipo{
-      grid-area: pipo;
-  }
-  .p1{
-      grid-area: middle;
-  }
-  .p2{
-      grid-area: right;
-      position: relative;
-      top: 20px;
-  }
-  .p3{
-      grid-area: left;
-      position: relative;
-      top: 20px;
-  }
-  .p4{
-      grid-area: bottom;
-      position: relative;
-      top: 20px;
-  }
-  #p1{
-      border-radius: 25px;
-      background-color: lightsteelblue;
-      border: 20px;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      display: inline-block;
-      font-size: 50px;
-      margin: 4px 2px;
-      cursor: pointer;
-      width: 800px;
-      height: 300px;
-      text-decoration: none;
-      font-family: Gabriola;
-  }
+.picture{
+    border-radius:50%;
+    width: 50%;
+    height: 50%;
+}
+.picture:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.pipo{
+    grid-area: pipo;
+}
+.p1{
+    grid-area: middle;
+}
+.p2{
+    grid-area: right;
+    position: relative;
+    top: 20px;
+}
+.p3{
+    grid-area: left;
+    position: relative;
+    top: 20px;
+}
+.p4{
+    grid-area: bottom;
+    position: relative;
+    top: 20px;
+}
+#p1{
+    border-radius: 25px;
+    background-color: #bce8f1;
+    border: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+    height: 200px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
 #p1:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     font-family: 'Montserrat', sans-serif;
@@ -109,7 +97,7 @@ body{
 }
 #p2{
     border-radius: 25px;
-    background-color: cornflowerblue;
+    background-color:skyblue;
     border: 20px;
     color: white;
     padding: 15px 32px;
@@ -158,40 +146,10 @@ p{
 
 /*byl*/
 /*body{*/
-    /*background: url('http://thecodeplayer.com/uploads/media/geometry.png');*/
+/*background: url('http://thecodeplayer.com/uploads/media/geometry.png');*/
 /*}*/
 /*.main{*/
-    /*height:500px;*/
-    /*display:table;*/
-    /*width: 100%;*/
+/*height:500px;*/
+/*display:table;*/
+/*width: 100%;*/
 /*}*/
-/*.module{*/
-    /*display:table-cell;*/
-/*}*/
-/*.sidebar{*/
-    /*width:400px;*/
-    /*height: 100%;*/
-/*}*/
-/*.Edit{*/
-    /*margin-top:25%;*/
-    /*text-align: center;*/
-/*}*/
-/*.photo{*/
-    /*margin-left:30%;*/
-/*}*/
-/*.info{*/
-    /*height:100%;*/
-    /*border:dashed;*/
-/*}*/
-/*.poster{*/
-    /*padding-left:400px;*/
-    /*height:500px;*/
-    /*display: table;*/
-    /*width: 100%;*/
-/*}*/
-/*.post{*/
-    /*display: table-cell;*/
-/*}*/
-
-
-

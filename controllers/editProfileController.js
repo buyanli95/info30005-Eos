@@ -28,6 +28,11 @@ module.exports.edit2 = function (req, res) {
         }
     });
 }
+module.exports.quiz = function (req, res) {
+    //Coming soon page
+    //res.render('home_template');
+    res.render('quiz');
+};
 
 //participant edit profile process
 module.exports.participanteditprofile= function(req, res) {
