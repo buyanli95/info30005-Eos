@@ -28,16 +28,14 @@
     <!--liked posts-->
     <div class="postsLiked">
         <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 73 }'>
-            <div class="center">
-            <%for(let i=0; i< posts.length; i++){ %>
+    <%for(let i=0; i< posts.length; i++){ %>
             <div class="grid-item">
-                <a href="/post/<%= posts[i]._id %>" class="button ali">
+                <a href="/post/liked/<%= posts[i]._id %>" class="button ali">
                     <h2><%= posts[i].title %></h2><br>
                     <p><%=  posts[i].brief %></p>
                 </a>
             </div>
-            <%}%>
-            </div>
+    <%}%>
         </div>
     </div>
 </div>

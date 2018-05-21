@@ -23,16 +23,15 @@
         <form method="POST" action="/users/participant_edit">
             <fieldset>
                 <legend><span class="number"> </span> participant profile</legend>
-                Email:<input type="email" id="email" name="email" value="<%= participant.email %>" required>
-                User name:<input type="text" id="username" name="username" readonly="readonly" value="<%= participant.username %>" required>
-                School:<input type="text" id="school" name="school" value="<%= participant.school%>" required>
-                Major:<input type="text" id="major" name="major" value="<%= participant.major%>" required>
-                Grade:<input type="text" id="grade" name="grade" value="<%= participant.grade%>" required>
+                Email:<input type="email" id="email" name="email" placeholder="<%= participant.email %>" required>
+                User name:<input type="text" id="username" name="username" readonly="readonly" placeholder="<%= participant.username %>" required>
+                School:<input type="text" id="school" name="school" placeholder="<%= participant.school%>" required>
+                Major:<input type="text" id="major" name="major" placeholder="<%= participant.major%>" required>
+                Grade:<input type="text" id="grade" name="grade" placeholder="<%= participant.grade%>" required>
 
                 <label for="job">Interests:</label>
-                <select class="custom-select" id="job" name="interest" required>
+                <select id="job" name="interest" value=<%= participant.interest%>>
                     <!--<optgroup label="Indoors">-->
-                    <option value="#">Selected: <%= participant.Interests %></option>
                     <option value="Architecture">Architecture</option>
                     <option value="Arts">Arts</option>
                     <option value="Biomedicine">Biomedicine</option>

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const expressValidator = require('express-validator');
 const Post = require("../models/post");
-
+const alert = require("alert-node");
 mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
 let db = mongoose.connection;
 
@@ -74,4 +74,5 @@ module.exports.loginProcess = function(req, res){
             }
         })
     }
+    else alert("Please select one role of account");
 }

@@ -40,3 +40,26 @@ module.exports.toPost = function (req, res) {
         }
     });
 }
+
+module.exports.likedToPost = function (req, res) {
+    likedPost.findOne({_id: req.params.id}, function (err, postObj) {
+        if(err) throw err;
+        if(!postObj){
+            console.log("likedToPost: liked post does not exist!");
+        }else{
+            req.session.likedID = postObj.postid;
+            //console.log(req.session.likedID);
+            Post.findOne({_id: req.session.likedID}, function (err, postObj) {
+                if(err) throw err;
+                if(!postObj){
+                    console.log("likedtoPost: post does not exist!");
+                }else{
+                    res.render('post', {post: postObj, username: req.session.username, join, like});
+                }
+            });
+        }
+    });
+
+
+
+}

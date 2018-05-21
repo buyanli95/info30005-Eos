@@ -21,20 +21,23 @@
 
 <body>
 <form method="POST" action="/users/addPostProcess">
+
     <div class="editsec">
         <!--title-->
-        <p><%= cname %></p>
             <div class="form-group" id="title">
             <label for="exampleTextarea"><h1>Example: Add A Post Title</h1></label>
-            <textarea id="summernote-title" name="title"></textarea>
+            <textarea type ="text" id="summernote-title" name="title"></textarea>
+                <input type="hidden" id="article_content" value="{$post.title}">
                 <!--brief-->
                 <div class="form-group" id="brief">
                     <label for="exampleTextarea"><h1>Post Brief</h1></label>
-                    <textarea id="summernote-brief" name="brief"></textarea>
+                    <textarea type="text" id="summernote-brief" name="brief"></textarea>
+                    <input type="hidden" id="article_content" value="{$post.brief}">
                         <!--detail-->
                         <div class="form-group" id="detail">
                             <label for="exampleTextarea"><h1>Post Details</h1></label>
-                            <textarea id="summernote-detail" name="detail"></textarea>
+                            <textarea type ="text" id="summernote-detail" name="detail"></textarea>
+                            <input type="hidden" id="article_content" value="{$post.detail}">
                             <!--calendar datepicker-->
                             <div class="calendar">
                                 <label for="exampleTextarea"><h1>DATE</h1></label>
@@ -53,33 +56,59 @@
     <script>
         $(document).ready(function() {
             $('#summernote-title').summernote({
-                placeholder: 'Hello bootstrap 4',
                 tabsize: 2,
-                height: 100
+                height: 100,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['insert', ['picture', 'video']]
+            ],
+
             });
         });
 
         $(document).ready(function() {
             $('#summernote-brief').summernote({
-                placeholder: 'Hello bootstrap 4',
                 tabsize: 2,
-                height: 200
+                height: 200,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['insert', ['picture', 'video']]
+                ],
             });
         });
         $(document).ready(function() {
             $('#summernote-detail').summernote({
-                placeholder: 'Hello bootstrap 4',
                 tabsize: 2,
-                height: 400
+                height: 400,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['insert', ['picture', 'video']]
+                ],
             });
         });
-    </script>
 
-<script>
     var $$ = $.noConflict();
     $$(function() {
         $$( "#datepicker" ).datepicker();
     });
+
+    $(function(){
+            var innerhtml = $("#article_content").val();
+            $("#summernote").val(innerhtml);
+        });
+
 </script>
 
 </body>

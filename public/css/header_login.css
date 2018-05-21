@@ -43,7 +43,6 @@ img{
     grid-area: login;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    /*background-color: #518BC5;*/
 }
 
 .login{
@@ -74,5 +73,5 @@ img{
 }
 
 .custom-select{
-    width: 15%;
+    width: 12%;
 }

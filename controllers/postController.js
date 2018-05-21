@@ -10,9 +10,26 @@ mongoose = require('mongoose')
 mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
 let db = mongoose.connection;
 
+function fermitTime(str){
+    let time = str.substring(0,3) + ' ' + str.substring(3,6) + ' ' + str.substring(6,8) + ' ' + str.substring(8, 12) + ' ' + str.substring(12, 20) + ' ' + str.substring(20, 27) + ' ' + str.substring(27, 33)
+    let now = new Date(time);
+    let year = now.getFullYear();
+    let mon = now.getMonth()+1;
+    let date= now.getDate();
+    if(mon<10){
+        mon = '0'+mon;
+    };
+    if(date<10){
+        date = '0'+date;
+    }
+    let postDate = year+'-'+mon+'-'+date;
+    return postDate;
+}
+
 module.exports.display = function(req,res){
     let username = req.session.username;
     let postid = req.session.postid;
+    let event = [];
 
     joinedPost.find({username:username} ,function(err,JoinObj){
 
@@ -23,8 +40,12 @@ module.exports.display = function(req,res){
             res.render('post_joined',{event: {}});
         }
         else{
-            console.log(JoinObj,"dafafsdafa");
-            res.render('post_joined',{event: JoinObj});
+            console.log(JoinObj,"that is JoinObj");
+            for (let val of JoinObj) {
+                event.push({ title: val.title, start: fermitTime(val.date), url: `/post/${val.postid}` })
+            }
+            console.log(event, "that is event");
+            res.render('post_joined',{event: `${JSON.stringify(event).replace('/"/g', '')}`});
             }
     });
 }
@@ -45,24 +66,7 @@ module.exports.edit = function (req, res) {
     });
 }
  module.exports.edit2 = function (req, res) {
-    //console.log("checkkkkkkkkkkkkkkkkkkkkkk");
-   //const cname = req.session.cname;
      res.render('edit2');}
-//     console.log("Cname： "+cname);
-//     // Provider.findOne({cname: cname}, function(err, providerObj){
-//     //     if(err) throw err;
-//     //     else if(!providerObj){
-//     //         console.log("provider not exist!");
-//     //         res.redirect('/eos_provider_profile')
-//     //     }else{
-//     //         // res.locals.title = postObj.title;
-//     //         // res.locals.brief = postObj.brief;
-//     //         // res.locals.detail = postObj.detail;
-//     //         console.log("provider found: "+providerObj);
-// ,{provider: providerObj});}
-//     //     }
-//     // });
-// }
 
 //fetchPost
 module.exports.providerPost = function (req, res) {
@@ -90,6 +94,20 @@ module.exports.addPost = function (req, res) {
     // const title = req.session.title;
     // res.locals.title = title;
     res.render('postAdd');
+}
+module.exports.postLiked =function (req,res){
+    const username = req.session.username;
+    res.locals.username = username;
+    //find posts
+    likedPost.find({username:username}, function(err, posts){
+        if(err) throw err;
+        else if(!posts){
+            console.log("postLiked: there's no posts");
+        }else{
+            console.log(posts.length);
+            res.render('post_liked', {posts: posts});
+        }
+    });
 }
 
 module.exports.addPostProcess = function (req, res) {
@@ -133,18 +151,4 @@ module.exports.addPostProcess = function (req, res) {
             }
         });
     }
-}
-
-module.exports.postLiked = function(req, res){
-    res.locals.username = req.session.username;
-    //find posts
-    Post.find({}, function(err, posts){
-        if(err) throw err;
-        else if(!posts){
-            console.log("postLiked: there's no posts");
-        }else{
-            console.log(posts.length);
-            res.render('post_liked', {posts: posts});
-        }
-    });
 }
