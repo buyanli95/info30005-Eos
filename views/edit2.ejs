@@ -8,7 +8,7 @@
     <script type="text/javascript" src="/js/signUp.js"></script>
     <style>
         #container {
-            background-image: url("https://cdn.pixabay.com/photo/2017/07/08/11/20/green-2484102_960_720.jpg");
+            background: url('http://thecodeplayer.com/uploads/media/geometry.png');
         }
         .container{
             float: left;
@@ -17,7 +17,7 @@
 </head>
 
 <body id="container">
-
+<%- include("./participantHomeTopbar.ejs") %>
 <div class="container">
     <div class="form-style-5">
         <form method="POST" action="/users/providerRegister">
