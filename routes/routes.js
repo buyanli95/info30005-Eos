@@ -25,7 +25,7 @@ router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
 router.get('/eos_participant_profile', homeController.par_profile);
 router.get('/post/:id', homeController.toPost);
-
+router.get('/post/liked/:id', homeController.likedToPost);
 
 
 // router.get('/edit', postController.edit);

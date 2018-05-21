@@ -54,7 +54,21 @@ module.exports.likedToPost = function (req, res) {
                 if(!postObj){
                     console.log("likedtoPost: post does not exist!");
                 }else{
-                    res.render('post', {post: postObj, username: req.session.username, join, like});
+
+                    let like = postObj.like = 1;
+
+                    joinedPost.findOne({postid: req.session.likedID}, function (err, joinedPostObj) {
+                        if(err){
+                            console.log(" joinedPost in likedToPost error: " + err);
+                        }
+                        if (joinedPostObj) {
+                            postObj.join = 1;
+                            console.log(postObj.join);
+                            console.log(postObj.like);
+                        }
+                    });
+
+                    res.render('post', {post: postObj, username: req.session.username, join: postObj.join, like});
                 }
             });
         }
