@@ -83,7 +83,7 @@ module.exports.participanteditprofile= function(req, res) {
         }
     });
     //edit interest info
-    Participant.findOneAndUpdate({username: username}, {Interest: interest}, function (err, doc) {
+    Participant.findOneAndUpdate({username: username}, {Interests: interest}, function (err, doc) {
         if(err) throw err;
         else if(!doc){
             console.log("participant edit profile: doc is not exist");

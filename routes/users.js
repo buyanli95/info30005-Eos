@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 
-
 const loginController = require('../controllers/loginController');
 const signUpController = require('../controllers/signUpController');
 const providerSignupProcessController = require('../controllers/providerSignupProcessController');
 const participantSignupProcessController = require('../controllers/participantSignupProcessController');
+const editProfileController = require('../controllers/editProfileController');
 
 router.get('/forgot_pw', loginController.forgotPw);
 router.get('/participantHome', loginController.parHome);
@@ -17,8 +17,10 @@ router.get('/provider_signup', signUpController.providerSignup);
 router.get('/participantHome', signUpController.participantSignupSubmit);
 router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
-// router.post('/participant_edit', participantSignupProcessController.participant_editprocessrofile);
-router.post('/participant_edit', participantSignupProcessController.participanteditprofile);
+
+// router.post('/participant_edit', participantSignupProcessController.participanteditprofile);
+router.post('/participant_edit', editProfileController.participanteditprofile);
+
 
 router.post('/participantRegister', participantSignupProcessController.participantRegisterProcess);
 router.post('/providerRegister', providerSignupProcessController.providerRegisterProcess);

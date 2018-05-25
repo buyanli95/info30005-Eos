@@ -17,6 +17,9 @@ body{
     /*"left main right";*/
     "brief"
     "main";
+    border: 2px hidden;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 /*cascade layout*/
@@ -42,7 +45,7 @@ body{
     width: 292px;
     background-color: #69b0dd;
     margin: 0.4em;
-    float: left;
+    /*float: left;*/
     border: none !important;
     border-radius: 10px;
     background-color: rgba(105, 176, 221, 0.49) !important;
