@@ -1,8 +1,8 @@
 .topbar{
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 5fr 1fr 0.1fr;
     grid-template-areas:
-    "logo search home profile notification logout";
+    "logo search icons none";
     font-size: 18px;
 	border-bottom: 20px black;
 	/*background-color: #16a085;*/
@@ -24,7 +24,7 @@ img{
 .search{
 	grid-area: search;
 	position: relative;
-	top: 20px;
+	top: 0.5em;
 }
 
 .topbar .search .mr-sm-2{
@@ -32,7 +32,12 @@ img{
 	height: 40px;
 }
 
-/*home button*/
+.icons{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "profile home logout";
+}
+
 .custom-btn {
   padding: 10px 25px;
   font-family: 'Roboto', sans-serif;
@@ -44,6 +49,7 @@ img{
   display: inline-block;
   font-size: 15px;
 }
+/*home button*/
 .btn-home {
     grid-area: home;
     position: relative;
@@ -62,14 +68,8 @@ img{
 	height: 100%;
 	position: relative;
 	top: 5px;
-}
-
-.notif{
-	grid-area: notification;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	top: 5px;
+	left: -1em;
+    text-decoration: none;
 }
 
 .btn-logout{
@@ -83,11 +83,3 @@ img{
   	border: none;
     color: black;
 }
-
-.postbox{
-	position: relative;
-	top: 40px;
-	left: 40px;
-	text-align: center;
-}
-

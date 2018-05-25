@@ -7,10 +7,7 @@ module.exports.likedPost = function (req, res) {
     let postid = req.body.postid;
     let date = req.body.date;
     let title = req.body.title;
-    console.log('username', username);
-    console.log('postid', postid);
-    console.log('date', date);
-    console.log('title', title);
+    let brief = req.body.brief;
 
     //manage mongodb - untested code!!!!!
     LikedPost.findOne({username, postid, date}, function (err, likedPostObj) {
@@ -23,7 +20,8 @@ module.exports.likedPost = function (req, res) {
                postid: postid,
                username: username,
                date: date,
-               title: title
+               title: title,
+                brief: brief
             });
 
             newLikedPostObj.save(function (err) {

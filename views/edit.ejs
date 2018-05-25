@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="/css/signUp.css">
     <script type="text/javascript" src="/js/signUp.js"></script>
     <style>
-        #container{
+        body{
             background-image: url("http://thecodeplayer.com/uploads/media/geometry.png");
         }
         .container{
             float: left;
+            position: relative;
+            left: -6em;
         }
     </style>
 </head>
 
-<body id="container">
+<body>
+<%- include("./participantHomeTopbar.ejs") %>
 
 <div class="container">
     <div class="form-style-5">
         <form method="POST" action="/users/participant_edit">
             <fieldset>
-                <legend><span class="number"> </span> participant profile</legend>
+                <legend><span class="number"> </span> Edit Your Profile</legend>
                 Email:<input type="email" id="email" name="email" value="<%= participant.email %>" required>
                 User name:<input type="text" id="username" name="username" readonly="readonly" value="<%= participant.username %>" required>
                 School:<input type="text" id="school" name="school" value="<%= participant.school%>" required>
@@ -45,7 +48,7 @@
                 </select>
             </fieldset>
             <!-- <input type="submit" value="Register and Login" onclick="participantSignup()"/> -->
-            <input type="submit" value="edit now"/>
+            <input type="submit" value="Confirm"/>
         </form>
     </div>
 </div>

@@ -10,7 +10,7 @@ body{
     border-radius:50%;
     font-family: Gabriola;
     width: 150%;
-    height: 130%;
+    height: 150%;
 }
 .username{
     position: relative;
@@ -61,11 +61,11 @@ body{
       padding: 15px 32px;
       text-align: center;
       display: inline-block;
-      font-size: 50px;
+      font-size: 2em;
       margin: 4px 2px;
       cursor: pointer;
       width: 800px;
-      height: 300px;
+      height: 200px;
       text-decoration: none;
 
   }
@@ -155,8 +155,8 @@ p{
     grid-area: image;
     position: relative;
     width: 100%;
-    height: 100%;
-    top: 50px;
+    height: 120%;
+    top: 1em;
 }
 .image .username{
     position: absolute;
@@ -241,6 +241,16 @@ a .button{
     margin: 10px 10px 10px 10px;
     padding-bottom: 4px;
     border-bottom: 1px solid gray;
+}
+
+.grid-item h2 {
+    margin: 1em 1em 0.5em 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+}
+
+.grid-item p {
+    margin: 0em 1em 1em 1em;
 }
 
 .p3 .grid .grid-item .p2 #p2{

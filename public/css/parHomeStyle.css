@@ -18,8 +18,9 @@ body{
     "brief"
     "main";
     border: 2px hidden;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+
 }
 
 /*cascade layout*/
@@ -31,6 +32,7 @@ body{
     justify-content: space-between;
     flex: 1;
     /*left: 5%;*/
+
 }
 .grid:after {
     content: '';

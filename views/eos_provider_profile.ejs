@@ -27,8 +27,7 @@
     <div class="p1">
         <a href="/edit2" class="button ali" id="p1">
             <div class="editbox" contenteditable="true">
-                Editable profile!<br>
-                Click and Go!
+                Click and Edit Profile!
             </div>
         </a>
     </div>
@@ -50,8 +49,8 @@
             %>
             <div class="grid-item">
                 <a href="/post2/<%= cname%>/<%= posts[i]._id %>" class="button ali" id="p3">
-                    <h1><%= posts[i].title %></h1>
-                    <%= posts[i].brief %>
+                    <h2><%= posts[i].title %></h2>
+                    <p><%= posts[i].brief %></p>
                 </a>
             </div>
             <% }} %>

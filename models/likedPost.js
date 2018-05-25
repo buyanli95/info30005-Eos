@@ -17,6 +17,10 @@ const LikedPostSchema = mongoose.Schema({
     title: {
         type: String,
         require: true
+    },
+    brief:{
+        type: String,
+        require: true
     }
 })
 

@@ -39,41 +39,38 @@
     </style>
 </head>
 <body>
-<div class="topbar">
-    <!--logo-->
-    <div class="logo">
-        <a href="/participantHome">
-            <img src="/image/eos_logo.png" alt="Logo is missing">
-        </a>
-    </div>
-    <!--search-->
-    <div class="search">
-        <!--<input type="text" id="search_bar" placeholder="Interests">-->
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-    <!--home-->
-    <div class="buttons-coll">
-        <button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>
-    </div>
-    <!--profile-->
-    <div class="profile">
-        <a href="/eos_participant_profile">
-            <img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">
-        </a>
-    </div>
-    <!--notification-->
-    <div class="notif">
-        <img id="inotif" src="/image/open-iconic-master/svg/envelope-closed.svg" alt="notification">
-    </div>
-    <!--logout-->
-    <div class="buttons-coll">
-        <button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>
-    </div>
-</div>
-<hr class="seperator 100%">
+<%- include("./participantHomeTopbar.ejs") %>
+<!--<div class="topbar">-->
+    <!--&lt;!&ndash;logo&ndash;&gt;-->
+    <!--<div class="logo">-->
+        <!--<a href="/participantHome">-->
+            <!--<img src="/image/eos_logo.png" alt="Logo is missing">-->
+        <!--</a>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;search&ndash;&gt;-->
+    <!--<div class="search">-->
+        <!--&lt;!&ndash;<input type="text" id="search_bar" placeholder="Interests">&ndash;&gt;-->
+        <!--<form class="form-inline my-2 my-lg-0">-->
+            <!--<input class="form-control mr-sm-2" type="search" placeholder="Explore your interests">-->
+            <!--<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;home&ndash;&gt;-->
+    <!--<div class="buttons-coll">-->
+        <!--<button onclick="{location.href='/participantHome'}" class="custom-btn btn-home" >Home</button>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;profile&ndash;&gt;-->
+    <!--<div class="profile">-->
+        <!--<a href="/eos_participant_profile">-->
+            <!--<img id="iprofile" src="/image/open-iconic-master/svg/person.svg" alt="person">-->
+        <!--</a>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;logout&ndash;&gt;-->
+    <!--<div class="buttons-coll">-->
+        <!--<button onclick="{location.href='/'}" class="custom-btn btn-logout" >Logout</button>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<hr class="seperator 100%">-->
     <div id="calendar"></div>
 
 <script type="text/javascript">
