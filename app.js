@@ -8,6 +8,7 @@ const passport = require('passport');
 const config = require('./config/database');
 
 
+
 //check connection
 // mongoose.connect('mongodb://eosdev:info30005@ds259119.mlab.com:59119/eosdb');
 mongoose.connect(config.database);

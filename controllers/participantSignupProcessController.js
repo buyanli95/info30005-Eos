@@ -1,5 +1,6 @@
 //bring in the User Model
 let Participant = require('../models/participants');
+const alert = require('alert-node');
 //participant register process
 module.exports.participantRegisterProcess = function(req, res){
     const email = req.body.email;
@@ -14,30 +15,40 @@ module.exports.participantRegisterProcess = function(req, res){
     req.checkBody('password', 'Password is required').notEmpty();
     req.checkBody('password2', 'Password do not match').equals(req.body.password);
 
-    if(password!=password2){
-        alert("Password not match!");
-    }
-    let errors = req.validationErrors();
-    if(errors){
-        res.render('participant_signup', {
-            errors: errors
-        });
-    }else{
-        let newParticipant = new Participant({
-            email: email,
-            username: username,
-            password: password
-        });
-        newParticipant.save(function(err){
-            if(err){
-                console.log(err);
-                return;
-            }else{
-                req.flash('success', 'You are now registered and can log in');
-                res.redirect('/users/login');
+    Participant.findOne({username: username}, function (err, user) {
+        if(err) throw err;
+        else if(user){
+            alert("Ooops, username already exist!");
+            res.render('participant_signup');
+        }else{
+            if(password!=password2){
+                alert("Password not match!");
             }
-        });
-    }
+            let errors = req.validationErrors();
+            if(errors){
+                res.render('participant_signup', {
+                    errors: errors
+                });
+            }else{
+                let newParticipant = new Participant({
+                    email: email,
+                    username: username,
+                    password: password
+                });
+                newParticipant.save(function(err){
+                    if(err){
+                        console.log(err);
+                        return;
+                    }else{
+                        req.flash('success', 'You are now registered and can log in');
+                        res.redirect('/users/login');
+                    }
+                });
+            }
+        }
+    });
+
+
 }
 
 // }
