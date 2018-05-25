@@ -1,5 +1,6 @@
 Participant = require("../models/participants");
 Provider = require("../models/providers");
+Post = require("../models/post");
 
 //participant edit profile form
 module.exports.edit = function (req, res) {
@@ -92,4 +93,42 @@ module.exports.participanteditprofile= function(req, res) {
         }
     });
     res.render('eos_participant_profile');
+}
+
+//provider edit profile process
+module.exports.providereditprofile= function(req, res) {
+    const email = req.body.email;
+    const cname = req.session.cname;
+    const industry = req.body.industry;
+    res.locals.cname = cname;
+
+    console.log("industry: " + industry);
+
+    //edit email address
+    Provider.findOneAndUpdate({cname: cname}, {email: email}, function (err, doc) {
+        if(err) throw err;
+        else if(!doc){
+            console.log("provider edit profile: doc is not exist");
+        }else{
+            console.log("provider email Edit successful!");
+        }
+    });
+    //edit industry info
+    Provider.findOneAndUpdate({cname: cname}, {industry: industry}, function (err, doc) {
+        if(err) throw err;
+        else if(!doc){
+            console.log("provider edit profile: doc is not exist");
+        }else{
+            console.log("industry Edit successful!");
+        }
+    });
+
+    Post.find({cname: cname}, function (err, posts) {
+        if(err) throw err;
+        else if(!posts){
+            console.log("posts does not exist");
+        }else{
+            res.render('eos_provider_profile', {posts: posts});
+        }
+    })
 }

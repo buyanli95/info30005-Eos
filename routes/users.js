@@ -20,6 +20,7 @@ router.get('/eos_provider_profile', signUpController.providerSignupSubmit);
 
 // router.post('/participant_edit', participantSignupProcessController.participanteditprofile);
 router.post('/participant_edit', editProfileController.participanteditprofile);
+router.post('/provider_edit', editProfileController.providereditprofile);
 
 
 router.post('/participantRegister', participantSignupProcessController.participantRegisterProcess);

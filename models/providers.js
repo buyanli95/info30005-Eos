@@ -13,6 +13,10 @@ const ProviderSchema = mongoose.Schema({
 	password:{
 		type: String,
 		required: true
+	},
+	industry:{
+		type: String,
+		required: true
 	}
 })
 const Provider = module.exports = mongoose.model('Provider', ProviderSchema);

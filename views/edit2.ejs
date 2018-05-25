@@ -20,18 +20,17 @@
 <%- include("./participantHomeTopbar.ejs") %>
 <div class="container">
     <div class="form-style-5">
-        <form method="POST" action="/users/providerRegister">
+        <form method="POST" action="/users/provider_edit">
             <fieldset>
                 <legend><span class="number"> </span> company profile</legend>
                 <!--<input type="nickname" name="field1_1" placeholder="Your Preferred Name">-->
-               Company email: <input type="email" id="icEmail" name="email" placeholder="111" required>
-                Company name:<input type="text" id="icName" name="cname" placeholder="Institution/Company Name *" required>
-                Company password<input type="password" id="icPassword" name="password" placeholder="Institution/Company Password*" required>
-                Confirm password<input type="password" id="icPassword2" name="password2" placeholder="Confirm Password*" required>
+               Company email: <input type="email" id="icEmail" name="email" placeholder="111" value="<%= provider.email %>" required>
+                Company name:<input type="text" id="icName" name="cname" placeholder="Institution/Company Name *" value="<%= provider.cname %>" required>
                 <!--<textarea name="field3" placeholder="About yourself"></textarea>-->
                 <label for="job">Industry:</label>
-                <select id="job" name="field4" value="select">
+                <select id="job" name="industry" value="<%= provider.industry%>">
                     <!--<optgroup label="Indoors">-->
+                    <option value="<%= provider.industry%>">Selected: <%= provider.industry%></option>
                     <option value="Architecture">Architecture</option>
                     <option value="Arts">Arts</option>
                     <option value="Biomedicine">Biomedicine</option>

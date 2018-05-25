@@ -33,7 +33,7 @@ module.exports.proProfile = function (req, res) {
     const cname = req.session.cname;
     res.locals.cname = cname;
     //find exist posts
-    Post.find({}, function(err, posts){
+    Post.find({cname: cname}, function(err, posts){
         if(err) throw err;
         else if(!posts){
             console.log("proProfile: post does not found");
