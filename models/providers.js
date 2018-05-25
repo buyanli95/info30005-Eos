@@ -16,7 +16,7 @@ const ProviderSchema = mongoose.Schema({
 	},
 	industry:{
 		type: String,
-		required: true
+		required: false
 	}
 })
 const Provider = module.exports = mongoose.model('Provider', ProviderSchema);
